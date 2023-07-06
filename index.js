@@ -38,6 +38,8 @@ xhr.onerror = function () {
     
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.response);
+            
             if (response.region_code == "US") {
                 window.location.replace("https://google.com/")
             };
