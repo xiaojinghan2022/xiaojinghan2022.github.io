@@ -1,4 +1,4 @@
-var ipUrl = "http://ip-api.com/json";
+var ipUrl = "http://ip-api.com/json/?fields=66846719";
 var xhr = new XMLHttpRequest();
 xhr.open('GET',ipUrl,true);
 xhr.send();
