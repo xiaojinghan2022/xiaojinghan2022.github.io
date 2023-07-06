@@ -10,10 +10,10 @@ xhr.onreadystatechange = function () {
         var response = JSON.parse(xhr.response);
             
         if (response.region_code == "US") {
-            window.location.replace("https://google.com/")
+            window.location.replace("./en_US")
         };
-        if (response.region_code == "CA") {
-            window.location.replace("https://google.ca/")
+        if (response.region_code == "zh_CN") {
+            window.location.replace("./zh_CN")
         };
             
         console.log(response);
@@ -22,8 +22,6 @@ xhr.onreadystatechange = function () {
         var City = document.getElementById("city");
         
         Ip.textContent = '当前IP为:'+response.ip+" ("+response.version+")"
-        City.textContent = 'IP属地为:'+response.country_name+response.city
-        console.log('你的'+response.version+'地址为:'+response.ip)
-        console.log('IP位于：'+response.country_name+" "+response.city)
+        City.textContent = 'IP属地为:'+response.country_name+" "+response.city
     }
 }
