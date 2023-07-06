@@ -1,5 +1,4 @@
 var ipUrl = "http://ip-api.com/json/?fields=66846719";
-
 var xhr = new XMLHttpRequest();
 
 xhr.onreadystatechange = function () {
@@ -22,7 +21,7 @@ xhr.onreadystatechange = function () {
         
         var Ip = document.getElementById("ip");
         
-        ip.textContent = '当前IP为:'+response.query;
+        Ip.textContent = '当前IP为:'+response.query;
         console.log('你的IP为:'+response.query);
         console.log('IP位于：'+response.country+" "+response.regionName);
     }
@@ -33,7 +32,10 @@ xhr.send();
 
 xhr.onerror = function () {
     console.error('connect time out');
+    
     var ipUrl = "https://ipapi.co/json/";
+    var xhr = new XMLHttpRequest();
+    
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             if (response.region_code == "US") {
@@ -47,7 +49,7 @@ xhr.onerror = function () {
         
             var Ip = document.getElementById("ip");
         
-            ip.textContent = '当前IP为:'+response.ip+" ("+response.version+")"
+            Ip.textContent = '当前IP为:'+response.ip+" ("+response.version+")"
             console.log('你的'+response.version+'地址为:'+response.ip)
             console.log('IP位于：'+response.country+" "+response.city)
         }
