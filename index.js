@@ -12,7 +12,7 @@ xhr.onreadystatechange = function () {
         if (response.region_code == "US") {
             window.location.replace("./en_US")
         };
-        if (response.region_code == "zh_CN") {
+        if (response.region_code == "CN") {
             window.location.replace("./zh_CN")
         };
             
