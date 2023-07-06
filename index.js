@@ -1,7 +1,6 @@
 var xhr = new XMLHttpRequest();
-var ipUrl = "https://ipapi.co/json/";
 
-xhr.open('GET',ipUrl,true);
+xhr.open('GET',"https://ipapi.co/json/",true);
 xhr.send();
 
     
