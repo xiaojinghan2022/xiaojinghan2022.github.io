@@ -8,10 +8,10 @@ xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var response = JSON.parse(xhr.response);
             
-        if (response.region_code == "US") {
+        if (response.country_code == "US") {
             window.location.replace("./en_US")
         };
-        if (response.region_code == "CN") {
+        if (response.country_code == "CN") {
             window.location.replace("./zh_CN")
         };
             
