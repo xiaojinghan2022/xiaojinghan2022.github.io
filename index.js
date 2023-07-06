@@ -1,4 +1,4 @@
-//var ipUrl = "http://ip-api.com/json/?fields=66846719";
+var ipUrl = "http://ip-api.com/json/?fields=66846719";
 var ipUrl = "https://ipapi.co/json/";
 var xhr = new XMLHttpRequest();
 
@@ -6,15 +6,15 @@ xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var response = JSON.parse(xhr.response);
         
-        /**if (response.status !== 'success') {
+        if (response.status !== 'success') {
             console.log("url连接成功，但"+response.message);
             return
-        };*/
+        };
         
-        if (response.countryCode == "US") {
+            if (response.region_code == "US") {
             window.location.replace("https://google.com/")
         }
-        if (response.countryCode == "CA") {
+        if (response.region_code == "CA") {
             window.location.replace("https://google.ca/")
         }
         console.log(response);
