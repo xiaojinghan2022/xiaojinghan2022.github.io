@@ -52,4 +52,6 @@ xhr.onerror = function () {
             console.log('IP位于：'+response.country+" "+response.city)
         }
     }
+    xhr.open('GET',ipUrl,true);
+    xhr.send();
 }
