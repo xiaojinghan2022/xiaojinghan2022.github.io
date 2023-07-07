@@ -22,7 +22,7 @@ xhr.onreadystatechange = function () {
         var lat= "&lat="+response.latitude
         var lng= "lng="+response.longitude  
     };
-    var abc =1;
+    var abc=1;
     window.abc=abc;
     window.lat=lat;
     window.lng=lng;
