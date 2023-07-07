@@ -51,6 +51,3 @@ xhr.onreadystatechange = function () {
         };
     }
 };
-export {
-    path_language
-};
