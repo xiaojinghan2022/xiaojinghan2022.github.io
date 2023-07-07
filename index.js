@@ -19,13 +19,15 @@ xhr.onreadystatechange = function () {
         Region.textContent = 'IP属地为:'+response.country_name+" "+response.region;
         var path_language = "https://xiaojinghan2022.github.io/"+response.language;
         console.log(path_language)
-        var lat = "&lat="+response.latitude
-        var lng = "lng="+response.longitude
-        
-    }
-    window.lat = lat
-    window.lng = lng
+        var lat= "&lat="+response.latitude
+        var lng= "lng="+response.longitude  
+    };
+    var abc =1;
+    window.abc=abc;
+    window.lat=lat;
+    window.lng=lng;
 };
+console.log(abc);
 console.log(lat);
 console.log(lng);
 var du_fanyi;
