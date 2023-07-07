@@ -28,6 +28,10 @@ xhr.onreadystatechange = function () {
                 var response = JSON.parse(xhr.response);
                 var ipPlace = document.getElementById("place")
                 var ipAddress = response.data
+                if(response.code !== '200') {
+                    ipPlace.textContent = 'Error:' + response.msg;
+                    return
+                };
                 ipPlace.textContent = ' '+ipAddress.city+
                                 ' '+ipAddress.district+
                                 ' '+ipAddress.street+
