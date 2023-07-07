@@ -29,7 +29,11 @@ xhr.onreadystatechange = function () {
                 var ipPlace = document.getElementById("place")
                 var ipAddress = response.data
                 if(response.code !== 200) {
-                    ipPlace.textContent = 'Error:' + response.msg;
+                    ipPlace.textContent = 'Error: ' + response.msg;
+                    return
+                };
+                if(ipAddress.city === undefined) {
+                    ipPlace.textContent = '你可能在 ' + response.recommend
                     return
                 };
                 ipPlace.textContent = ' '+ipAddress.city+
