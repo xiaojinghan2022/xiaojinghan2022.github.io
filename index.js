@@ -27,9 +27,9 @@ xhr.onreadystatechange = function () {
     window.lat=lat;
     window.lng=lng;
 };
-console.log(abc);
-console.log(lat);
-console.log(lng);
+console.log(window.abc);
+console.log(window.lat);
+console.log(window.lng);
 var du_fanyi;
 
 xhr.open('GET',"http://res.abeim.cn/api-location_geocoder_address?"+lng+lat,true);
