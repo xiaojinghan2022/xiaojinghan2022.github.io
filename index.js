@@ -1,6 +1,6 @@
 var xhr = new XMLHttpRequest();
 
-xhr.open('GET',"https://ipapi.co/json/",false);
+xhr.open('GET',"https://ipapi.co/json/",true);
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
@@ -20,23 +20,19 @@ xhr.onreadystatechange = function () {
         var path_language = "https://xiaojinghan2022.github.io/"+response.language;
         console.log(path_language)
         var lat= "&lat="+response.latitude
-        var lng= "lng="+response.longitude  
-    };
-    window.lat=lat;
-    window.lng = lng;
-};
-console.log(lat);
-console.log(lng);
+        var lng= "lng="+response.longitude
+        xhr.open('GET',"http://res.abeim.cn/api-location_geocoder_address?"+lng+lat,true);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var response = JSON.parse(xhr.response);
+                var ipPlace = document.getElementById("place")
+                ipPlace.textContent = ' '+response.city+
+                                ' '+response.district+
+                                ' '+response.street+
+                                ' '+response.title
 
-xhr.open('GET',"http://res.abeim.cn/api-location_geocoder_address?"+lng+lat,false);
-xhr.send();
-xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        var response = JSON.parse(xhr.response);
-        var ipPlace = document.getElementById("place")
-        ipPlace.textContent = ' '+response.city+
-            ' '+response.district+
-            ' '+response.street+
-            ' '+response.title
+            }
+        }
     }
 }
