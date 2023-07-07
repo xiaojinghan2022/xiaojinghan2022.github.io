@@ -27,10 +27,11 @@ xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var response = JSON.parse(xhr.response);
                 var ipPlace = document.getElementById("place")
-                ipPlace.textContent = ' '+response.city+
-                                ' '+response.district+
-                                ' '+response.street+
-                                ' '+response.title
+                var ipAddress = response.data
+                ipPlace.textContent = ' '+ipAddress.city+
+                                ' '+ipAddress.district+
+                                ' '+ipAddress.street+
+                                ' '+ipAddress.title
 
             }
         }
