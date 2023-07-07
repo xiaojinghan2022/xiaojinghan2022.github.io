@@ -33,7 +33,7 @@ xhr.onreadystatechange = function () {
                     return
                 };
                 if(ipAddress.city === undefined) {
-                    ipPlace.textContent = '你可能在 ' + response.recommend
+                    ipPlace.textContent = '你可能在 ' + ipAddress.recommend
                     return
                 };
                 ipPlace.textContent = ' '+ipAddress.city+
