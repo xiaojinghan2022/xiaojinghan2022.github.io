@@ -1,6 +1,6 @@
 var xhr = new XMLHttpRequest();
 var response = JSON.parse(xhr.response);
-xhr.open('GET',"https://ipapi.co/json/",true);
+xhr.open('GET',"https://ipapi.co/json/",false);
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
@@ -28,7 +28,7 @@ xhr.onreadystatechange = function () {
 console.log(lat);
 console.log(lng);
 
-xhr.open('GET',"http://res.abeim.cn/api-location_geocoder_address?"+lng+lat,true);
+xhr.open('GET',"http://res.abeim.cn/api-location_geocoder_address?"+lng+lat,false);
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
