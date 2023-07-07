@@ -25,13 +25,13 @@ xhr.onreadystatechange = function () {
     var abc=1;
     window.abc=abc;
     window.lat=lat;
-    window.lng=lng;
+    window.lng = lng;
 };
 var ade =1;
 console.log(ade);
 console.log(window.abc);
-console.log(window.lat);
-console.log(window.lng);
+console.log(lat);
+console.log(lng);
 var du_fanyi;
 
 xhr.open('GET',"http://res.abeim.cn/api-location_geocoder_address?"+lng+lat,true);
