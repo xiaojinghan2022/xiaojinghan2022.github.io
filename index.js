@@ -21,7 +21,7 @@ xhr.onreadystatechange = function () {
         console.log(path_language)
         var lat= "&lat="+response.latitude
         var lng= "lng="+response.longitude
-        xhr.open('GET',"http://res.abeim.cn/api-location_geocoder_address?"+lng+lat,true);
+        xhr.open('GET',"https://res.abeim.cn/api-location_geocoder_address?"+lng+lat,true);
         xhr.send();
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
