@@ -1,10 +1,10 @@
 var xhr = new XMLHttpRequest();
-var response = JSON.parse(xhr.response);
+
 xhr.open('GET',"https://ipapi.co/json/",false);
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
-        
+        var response = JSON.parse(xhr.response);
         if (response.country_code == "US") {
             window.location.replace("./US")
         };
@@ -32,6 +32,7 @@ xhr.open('GET',"http://res.abeim.cn/api-location_geocoder_address?"+lng+lat,fals
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
+        var response = JSON.parse(xhr.response);
         var ipPlace = document.getElementById("place")
         ipPlace.textContent = ' '+response.city+
             ' '+response.district+
