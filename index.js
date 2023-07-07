@@ -1,5 +1,5 @@
 var xhr = new XMLHttpRequest();
-xhr.open('GET',"https://ipapi.co/json/",true);
+xhr.open('GET',"https://ipapi.co/json/",false);
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
@@ -27,6 +27,8 @@ xhr.onreadystatechange = function () {
     window.lat=lat;
     window.lng=lng;
 };
+var ade =1;
+console.log(ade);
 console.log(window.abc);
 console.log(window.lat);
 console.log(window.lng);
