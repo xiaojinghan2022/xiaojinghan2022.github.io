@@ -1,4 +1,3 @@
-import { path } from "./config/path";
 
 var xhr = new XMLHttpRequest();
 //var path_language;
@@ -8,10 +7,10 @@ xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var response = JSON.parse(xhr.response);
         if (response.country_code == "US") {
-            window.location.replace(path+"US")
+            window.location.replace("./US")
         };
         if (response.country_code == "CN") {
-            window.location.replace(path+"CN")
+            window.location.replace("./CN")
         };
         
         var Ip = document.getElementById("ip");
@@ -55,4 +54,3 @@ xhr.onreadystatechange = function () {
 export {
     path_language
 };
-console.log(path)
