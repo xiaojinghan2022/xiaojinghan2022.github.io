@@ -6,10 +6,10 @@ xhr.onreadystatechange = function () {
         var response = JSON.parse(xhr.response);
             
         if (response.country_code == "US") {
-            window.location.replace("./en_US")
+            window.location.replace("./US")
         };
         if (response.country_code == "CN") {
-            window.location.replace("./zh_CN")
+            window.location.replace("./CN")
         };
         
         var Ip = document.getElementById("ip");
