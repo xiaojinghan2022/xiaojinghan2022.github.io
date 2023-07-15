@@ -1,8 +1,6 @@
 
 var xhr = new XMLHttpRequest();
 //var path_language;
-xhr.open('GET',"https://ipapi.co/json/",true);
-xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var response = JSON.parse(xhr.response);
@@ -46,8 +44,10 @@ xhr.onreadystatechange = function () {
 
                 }
             }
-        }catch (error){
+        } catch (err) {
             document.getElementById("place").textContent = '你在 ' +response.longitude+","+response.latitude
         };
     }
 };
+xhr.open('GET',"https://ipapi.co/json/",true);
+xhr.send();
