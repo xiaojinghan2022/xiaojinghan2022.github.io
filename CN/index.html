@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tianxing-CN</title>
+    <script type="text/javascript" src="./index.js"></script>
     <link rel="icon" href="../img/tianxing-logo.ico">
+    <link rel="stylesheet" href="./login.css" type="text/css">
 </head>
 <body>
-    <h1>欢迎来到天星！</h1>
+    <div>
+        <h1>欢迎来到天星！</h1>
+    </div>
     <a href="../blog/index.html">博客</a>
-    <p><input placeholder="账号："><p>
-    <p><input type="password" placeholder="密码："><p>   
+    
+    <div class="password_accounts">
+        <div class="accounts_number">
+            <input type="text" placeholder="账号：" id="accounts">
+        </div>
+        <div class="password_number">
+            <input type="password" placeholder="密码：" id="password">
+            <div class="conceal" id="conceal"></div>
+            <script type="text/javascript">
+            var password = document.getElementById('password');
+            var anniu = document.getElementById('conceal');
+            anniu.addEventListener('click',function(){
+                if(password.type==='password') {
+                    password.setAttribute('type','text');
+                    anniu.classList.add('yincang');
+                }else{
+                    password.setAttribute('type','password');
+                    anniu.classList.remove('yincang');
+                }
+            })
+            </script>
+        </div>
+    </div>
 </body>
 </html>

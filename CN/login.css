@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.password_number{
+    position: relative;
+    width: 380px;
+    height: 60px;
+    border-radius: 5px;
+    box-shadow: inset 5px 5px 10px rgba(204, 197, 197,.5),
+                inset -5px -5px 8px rgba(204, 197, 197,.5);
+}
+.password_number input{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 300px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background-color:transparent;
+}
+.password_number input::placeholder{
+    color: rgba(68, 67, 67,.8);
+}
+.accounts_number{
+    position: relative;
+    width: 380px;
+    height: 60px;
+    border-radius: 5px;
+    box-shadow: inset 5px 5px 10px rgba(204, 197, 197,.5),
+                inset -5px -5px 8px rgba(204, 197, 197,.5);
+}
+.accounts_number input{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 300px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background-color:transparent;
+}
+.conceal{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/eys-open.ico);
+    background-size: 100% 100%;   
+    cursor: pointer;
+}
+.conceal.yincang{
+    background-image: url(../img/eys-close.ico);
+    background-size: 100% 100%; 
+}
