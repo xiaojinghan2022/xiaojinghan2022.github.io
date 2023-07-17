@@ -56,11 +56,11 @@ body{
     right: 15px;
     width: 30px;
     height: 30px;
-    background-image: url(../img/eys-open.ico);
+    background-image: url(../../img/accountPassword/eys-open.ico);
     background-size: 100% 100%;   
     cursor: pointer;
 }
 .conceal.yincang{
-    background-image: url(../img/eys-close.ico);
+    background-image: url(../../img/accountPassword/eys-close.ico);
     background-size: 100% 100%; 
 }
