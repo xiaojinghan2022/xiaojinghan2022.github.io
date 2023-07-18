@@ -16,7 +16,6 @@ xhr.onreadystatechange = function () {
         Ip.textContent = '当前IP为:'+response.ip+" ("+response.version+")";
         Region.textContent = 'IP属地为:'+response.country_name+" "+response.region;
         var path_language = "https://xiaojinghan2022.github.io/"+response.languages;
-        console.log(path_language)
         window.path_language=path_language
         var lat= "&lat="+response.latitude
         var lng= "lng="+response.longitude
