@@ -1,5 +1,5 @@
 [{
     "relation": ["delegate_permission/common.handle_all_urls"],
-    "target" : { "namespace": "android_app", "package_name": "com.tianxing.superultimate",
+    "target" : { "namespace": "android_app", "package_name": "com.tianxing.superultimate.debug",
         "sha256_cert_fingerprints": ["0A:E3:90:A6:7B:9B:07:B8:63:84:E8:89:57:66:32:08:AC:61:CC:36:7E:03:E1:14:FE:24:E5:5F:E2:16:D4:20"] }
 }]
