@@ -1,14 +1,6 @@
 payload:
 ##Bing
   - 'cn.bing.com'
-##steam
-  - 'steamcontent.com'
-#- 'steamstatic.com'
-  - 'steamserver.net'
-  - 'test.steampowered.com'
-  - 'api.steampowered.com'
-  - 'rmbgame.net'
-  - 'st.dl.eccdnx.com'
 ##google play
   - 'services.googleapis.cn'
   - 'xn--ngstr-lra8j.com'

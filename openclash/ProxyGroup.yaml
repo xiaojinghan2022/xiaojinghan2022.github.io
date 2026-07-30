@@ -16,6 +16,11 @@
       - Proxy
       - SG
       - US
+  - name: Direct-Steam
+    type: select
+    proxies:
+      - DIRECT
+      - Steam
 
 domain_rule: &domain_rule
   type: http
@@ -32,6 +37,10 @@ domain_rule: &domain_rule
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/DIRECTRule.yaml
     path: ./rule_provider/DIRECTRule.yaml
+  direct_steam:
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/DIRECTRule-Steam.yaml
+    path: ./rule_provider/DIRECTRule-Steam.yaml
   proxy_rule:
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYRule.yaml
@@ -52,16 +61,17 @@ domain_rule: &domain_rule
 +<rules>:
   - RULE-SET,reject-list,REJECT
   - RULE-SET,direct_rule,DIRECT
+  - RULE-SET,direct_steam,DIRECT-Steam
   - RULE-SET,proxy_rule,Proxy
   - RULE-SET,proxy_steam,Steam
   - RULE-SET,proxy_us,US
   - RULE-SET,proxy_openai,OpenAI
-<rules>+:
-  - GEOSITE,geolocation-!cn@cn,DIRECT
-  - GEOSITE,geolocation-!cn,Proxy
-  - GEOSITE,geolocation-cn@!cn,Proxy
-  - GEOSITE,geolocation-cn,DIRECT
-  - GEOSITE,tld-cn,DIRECT
+#<rules>+:
+#  - GEOSITE,geolocation-!cn@cn,DIRECT
+#  - GEOSITE,geolocation-!cn,Proxy
+#  - GEOSITE,geolocation-cn@!cn,Proxy
+#  - GEOSITE,geolocation-cn,DIRECT
+#  - GEOSITE,tld-cn,DIRECT
 
 dns:
   <fake-ip-filter>+:
