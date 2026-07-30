@@ -17,27 +17,28 @@
       - SG
       - US
 
-file_rule: &file_rule
-  type: file
+domain_rule: &domain_rule
+  type: http
   behavior: domain
   format: yaml
+  interval: 86400
 
 +<rule-providers>:
   reject-list:
-    type: http
-    behavior: domain
-    format: yaml
-    interval: 86400
+    <<: *domain_rule
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
     path: ./rule_provider/reject.txt
   direct_rule:
-    <<: *file_rule
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/DIRECTRule.yaml
     path: ./rule_provider/DIRECTRule.yaml
   proxy_rule:
-    <<: *file_rule
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYRule.yaml
     path: ./rule_provider/PROXYRule.yaml
   proxy_steam:
-    <<: *file_rule
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYRule-Steam.yaml
     path: ./rule_provider/PROXYRule-Steam.yaml
 
 +<rules>:
