@@ -40,12 +40,22 @@ domain_rule: &domain_rule
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYRule-Steam.yaml
     path: ./rule_provider/PROXYRule-Steam.yaml
+  proxy_us:
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYRule-US.yaml
+    path: ./rule_provider/PROXYRule-US.yaml
+  proxy_openai:
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYRule-US.yaml
+    path: ./rule_provider/PROXYRule-US.yaml
 
 +<rules>:
   - RULE-SET,reject-list,REJECT
   - RULE-SET,direct_rule,DIRECT
   - RULE-SET,proxy_rule,Proxy
   - RULE-SET,proxy_steam,Steam
+  - RULE-SET,proxy_us,US
+  - RULE-SET,proxy_openai,OpenAI
 <rules>+:
   - GEOSITE,geolocation-!cn@cn,DIRECT
   - GEOSITE,geolocation-!cn,Proxy

@@ -1,61 +1,55 @@
 payload:
-  ##garry's mod
-  - IP-CIDR,78.141.200.151/32,DIRECT
 ##Bing
-  - DOMAIN-SUFFIX,cn.bing.com,DIRECT
+  - 'cn.bing.com'
 ##steam
-  - DOMAIN-SUFFIX,steamcontent.com,DIRECT
-#- DOMAIN-SUFFIX,steamstatic.com,DIRECT
-  - DOMAIN-SUFFIX,steamserver.net,DIRECT
-  - DOMAIN-SUFFIX,test.steampowered.com,DIRECT
-  - DOMAIN-SUFFIX,api.steampowered.com,DIRECT
-  - DOMAIN-SUFFIX,rmbgame.net,DIRECT
-  - DOMAIN-SUFFIX,st.dl.eccdnx.com,DIRECT
+  - 'steamcontent.com'
+#- 'steamstatic.com'
+  - 'steamserver.net'
+  - 'test.steampowered.com'
+  - 'api.steampowered.com'
+  - 'rmbgame.net'
+  - 'st.dl.eccdnx.com'
 ##google play
-  - DOMAIN-SUFFIX,services.googleapis.cn,DIRECT
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,DIRECT
-  - DOMAIN-SUFFIX,r3---sn-j5o76n7d.gvt1-cn.com,DIRECT
-  - DOMAIN-SUFFIX,wb.miraheze.org,DIRECT
-  - DOMAIN-SUFFIX,nwdan.com,DIRECT
-  - DOMAIN-SUFFIX,meituan.net,DIRECT
-  - DOMAIN-SUFFIX,h.trace.qq.com,DIRECT
-  - DOMAIN-SUFFIX,prpr-muse-dash.peropero.net,DIRECT
-  - DOMAIN-SUFFIX,report.tencentmusic.com,DIRECT
-  - DOMAIN-SUFFIX,hb.kg.qq.com,DIRECT
-  - DOMAIN-SUFFIX,imgheybox1.max-c.com,DIRECT
-  - DOMAIN-SUFFIX,mmbiz.qpic.cn,DIRECT
+  - 'services.googleapis.cn'
+  - 'xn--ngstr-lra8j.com'
+  - 'r3---sn-j5o76n7d.gvt1-cn.com'
+  - 'wb.miraheze.org'
+  - 'nwdan.com'
+  - 'meituan.net'
+  - 'h.trace.qq.com'
+  - 'prpr-muse-dash.peropero.net'
+  - 'report.tencentmusic.com'
+  - 'hb.kg.qq.com'
+  - 'imgheybox1.max-c.com'
+  - 'mmbiz.qpic.cn'
 ##xiaomi
-  - DOMAIN-SUFFIX,galleryapi.micloud.xiaomi.net,DIRECT
-  - DOMAIN-SUFFIX,tracking.miui.com,DIRECT
-  - DOMAIN-SUFFIX,tracker.xiaomixiaoai.com,DIRECT
-  - DOMAIN-SUFFIX,weatherapi.market.xiaomi.com,DIRECT
-  - DOMAIN-SUFFIX,sec.miui.com,DIRECT
+  - 'galleryapi.micloud.xiaomi.net'
+  - 'tracking.miui.com'
+  - 'tracker.xiaomixiaoai.com'
+  - 'weatherapi.market.xiaomi.com'
+  - 'sec.miui.com'
 ##mijia
-  - DOMAIN-SUFFIX,home.mi.com,DIRECT
+  - 'home.mi.com'
 ##wechat
-  - DOMAIN-SUFFIX,szextshort.weixin.qq.com,DIRECT
+  - 'szextshort.weixin.qq.com'
 ##xiaohongshu
-  - DOMAIN-SUFFIX,ads-img-al.xhscdn.com,DIRECT
-  - DOMAIN-SUFFIX,live-source-play-hw.xhscdn.com,DIRECT
+  - 'ads-img-al.xhscdn.com'
+  - 'live-source-play-hw.xhscdn.com'
 ##zhihu
-  - DOMAIN-SUFFIX,sugar.zhihu.com,DIRECT
+  - 'sugar.zhihu.com'
 ##coolapk
-  - DOMAIN-SUFFIX,image.coolapk.com,DIRECT
+  - 'image.coolapk.com'
 ##rizline
-  - DOMAIN-SUFFIX,rizlineassetstore.pigeongames.cn,DIRECT
+  - 'rizlineassetstore.pigeongames.cn'
 ##HIKARI FIELD
-  - DOMAIN-SUFFIX,store.hikarifield.co.jp,DIRECT
+  - 'store.hikarifield.co.jp'
 ##JD
-  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - 'jd.com'
 ##xiaoheihe
-  - DOMAIN-SUFFIX,xiaoheihe.cn,DIRECT
+  - 'xiaoheihe.cn'
 ##steampy
-  - DOMAIN-SUFFIX,steampy.com,DIRECT
-##openai
-  - DOMAIN-SUFFIX,api.oaistatsig.com,OpenAI
+  - 'steampy.com'
 ##truenas
-  - DOMAIN-SUFFIX,update.ixsystems.com,DIRECT
-##wireshark
-  - DOMAIN-SUFFIX,2.na.dl.wireshark.org,US
+  - 'update.ixsystems.com'
 ##tencentmap
-  - DOMAIN-SUFFIX,lhp.map.qq.com,DIRECT
+  - 'lhp.map.qq.com'
