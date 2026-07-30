@@ -1,2 +1,61 @@
 payload:
-  - '+.lctianxing.top'
+  ##garry's mod
+  - IP-CIDR,78.141.200.151/32,DIRECT
+##Bing
+  - DOMAIN-SUFFIX,cn.bing.com,DIRECT
+##steam
+  - DOMAIN-SUFFIX,steamcontent.com,DIRECT
+#- DOMAIN-SUFFIX,steamstatic.com,DIRECT
+  - DOMAIN-SUFFIX,steamserver.net,DIRECT
+  - DOMAIN-SUFFIX,test.steampowered.com,DIRECT
+  - DOMAIN-SUFFIX,api.steampowered.com,DIRECT
+  - DOMAIN-SUFFIX,rmbgame.net,DIRECT
+  - DOMAIN-SUFFIX,st.dl.eccdnx.com,DIRECT
+##google play
+  - DOMAIN-SUFFIX,services.googleapis.cn,DIRECT
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,DIRECT
+  - DOMAIN-SUFFIX,r3---sn-j5o76n7d.gvt1-cn.com,DIRECT
+  - DOMAIN-SUFFIX,wb.miraheze.org,DIRECT
+  - DOMAIN-SUFFIX,nwdan.com,DIRECT
+  - DOMAIN-SUFFIX,meituan.net,DIRECT
+  - DOMAIN-SUFFIX,h.trace.qq.com,DIRECT
+  - DOMAIN-SUFFIX,prpr-muse-dash.peropero.net,DIRECT
+  - DOMAIN-SUFFIX,report.tencentmusic.com,DIRECT
+  - DOMAIN-SUFFIX,hb.kg.qq.com,DIRECT
+  - DOMAIN-SUFFIX,imgheybox1.max-c.com,DIRECT
+  - DOMAIN-SUFFIX,mmbiz.qpic.cn,DIRECT
+##xiaomi
+  - DOMAIN-SUFFIX,galleryapi.micloud.xiaomi.net,DIRECT
+  - DOMAIN-SUFFIX,tracking.miui.com,DIRECT
+  - DOMAIN-SUFFIX,tracker.xiaomixiaoai.com,DIRECT
+  - DOMAIN-SUFFIX,weatherapi.market.xiaomi.com,DIRECT
+  - DOMAIN-SUFFIX,sec.miui.com,DIRECT
+##mijia
+  - DOMAIN-SUFFIX,home.mi.com,DIRECT
+##wechat
+  - DOMAIN-SUFFIX,szextshort.weixin.qq.com,DIRECT
+##xiaohongshu
+  - DOMAIN-SUFFIX,ads-img-al.xhscdn.com,DIRECT
+  - DOMAIN-SUFFIX,live-source-play-hw.xhscdn.com,DIRECT
+##zhihu
+  - DOMAIN-SUFFIX,sugar.zhihu.com,DIRECT
+##coolapk
+  - DOMAIN-SUFFIX,image.coolapk.com,DIRECT
+##rizline
+  - DOMAIN-SUFFIX,rizlineassetstore.pigeongames.cn,DIRECT
+##HIKARI FIELD
+  - DOMAIN-SUFFIX,store.hikarifield.co.jp,DIRECT
+##JD
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+##xiaoheihe
+  - DOMAIN-SUFFIX,xiaoheihe.cn,DIRECT
+##steampy
+  - DOMAIN-SUFFIX,steampy.com,DIRECT
+##openai
+  - DOMAIN-SUFFIX,api.oaistatsig.com,OpenAI
+##truenas
+  - DOMAIN-SUFFIX,update.ixsystems.com,DIRECT
+##wireshark
+  - DOMAIN-SUFFIX,2.na.dl.wireshark.org,US
+##tencentmap
+  - DOMAIN-SUFFIX,lhp.map.qq.com,DIRECT
