@@ -46,8 +46,8 @@ domain_rule: &domain_rule
     path: ./rule_provider/PROXYRule-US.yaml
   proxy_openai:
     <<: *domain_rule
-    url: https://github.lctianxing.top/openclash/rule/PROXYRule-US.yaml
-    path: ./rule_provider/PROXYRule-US.yaml
+    url: https://github.lctianxing.top/openclash/rule/PROXYRule-OpenAI.yaml
+    path: ./rule_provider/PROXYRule-OpenAI.yaml
 
 +<rules>:
   - RULE-SET,reject-list,REJECT
