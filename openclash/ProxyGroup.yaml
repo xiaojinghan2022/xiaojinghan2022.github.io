@@ -1,0 +1,61 @@
+[YAML]
+<proxy-groups>+:
+  - name: DLsite
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+      - HK
+      - JP
+      - SG
+      - TW
+      - US
+  - name: e-hentai
+    type: select
+    proxies:
+      - Proxy
+      - SG
+      - US
+
+file_rule: &file_rule
+  type: file
+  behavior: domain
+  format: yaml
+
++<rule-providers>:
+  reject-list:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./rule_provider/reject.txt
+  direct_rule:
+    <<: *file_rule
+    path: ./rule_provider/DIRECTRule.yaml
+  proxy_rule:
+    <<: *file_rule
+    path: ./rule_provider/PROXYRule.yaml
+  proxy_steam:
+    <<: *file_rule
+    path: ./rule_provider/PROXYRule-Steam.yaml
+
++<rules>:
+  - RULE-SET,reject-list,REJECT
+  - RULE-SET,direct_rule,DIRECT
+  - RULE-SET,proxy_rule,Proxy
+  - RULE-SET,proxy_steam,Steam
+<rules>+:
+  - GEOSITE,geolocation-!cn@cn,DIRECT
+  - GEOSITE,geolocation-!cn,Proxy
+  - GEOSITE,geolocation-cn@!cn,Proxy
+  - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,tld-cn,DIRECT
+
+dns:
+  <fake-ip-filter>+:
+    - +.511495.xyz
+    - +.lctx.top
+    - +.lctianxing.top
+    - geosite:connectivity-check
+    - geosite:private
