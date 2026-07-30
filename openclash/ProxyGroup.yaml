@@ -16,7 +16,7 @@
       - Proxy
       - SG
       - US
-  - name: Direct-Steam
+  - name: DIRECT-Steam
     type: select
     proxies:
       - DIRECT
