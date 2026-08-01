@@ -4,3 +4,15 @@ proxy-groups+:
     type: select
     proxies:
       - Proxies
+proxy-providers:
+  korean:
+    type: file
+    path: ./config/$SUBSCRIPTION_NAME
+    filter: "韩国|KR|Korea"
+proxy-groups:
+  - name: KR
+    type: select
+    proxies:
+      - DIRECT
+      - use:
+        - korean
