@@ -45,3 +45,7 @@ payload:
   - 'update.ixsystems.com'
 ##tencentmap
   - 'lhp.map.qq.com'
+##
+  - 'rmbgame.net'
+##sudoku.coach
+  - 'sudoku.coach'
