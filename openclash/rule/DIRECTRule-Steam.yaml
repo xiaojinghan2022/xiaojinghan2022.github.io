@@ -4,5 +4,5 @@ payload:
 #- 'steamstatic.com'
   - 'steamserver.net'
   - 'test.steampowered.com'
-  - 'api.steampowered.com'
+#  - 'api.steampowered.com'
   - 'st.dl.eccdnx.com'
