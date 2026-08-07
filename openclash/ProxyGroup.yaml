@@ -75,6 +75,9 @@ domain_rule: &domain_rule
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYRule-OpenAI.yaml
     path: ./rule_provider/PROXYRule-OpenAI.yaml
+  proxy_dlsite:
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYRule-DLsite.yaml
 
 +<rules>:
   - RULE-SET,reject-list,REJECT
@@ -86,6 +89,7 @@ domain_rule: &domain_rule
   - RULE-SET,proxy_steam,Steam
   - RULE-SET,proxy_us,US
   - RULE-SET,proxy_openai,OpenAI
+  - RULE-SET,proxy_dlsite,DLsite
 #<rules>+:
 #  - GEOSITE,geolocation-!cn@cn,DIRECT
 #  - GEOSITE,geolocation-!cn,Proxy
