@@ -78,6 +78,7 @@ domain_rule: &domain_rule
   proxy_dlsite:
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYRule-DLsite.yaml
+    path: ./rule_provider/PROXYRule-DLsite.yaml
 
 +<rules>:
   - RULE-SET,reject-list,REJECT
