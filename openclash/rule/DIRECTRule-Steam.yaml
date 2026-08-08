@@ -1,8 +1,8 @@
 payload:
 ##steam
-  - 'steamcontent.com'
-#- 'steamstatic.com'
-  - 'steamserver.net'
-  - 'test.steampowered.com'
-#  - 'api.steampowered.com'
-  - 'st.dl.eccdnx.com'
+  - '+.steamcontent.com'
+#- '+.steamstatic.com'
+  - '+.steamserver.net'
+  - '+.test.steampowered.com'
+#  - '+.api.steampowered.com'
+  - '+.st.dl.eccdnx.com'

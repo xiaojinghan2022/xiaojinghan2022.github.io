@@ -1,53 +1,55 @@
 payload:
 ##Bing
-  - 'cn.bing.com'
+  - '+.cn.bing.com'
 ##google play
-  - 'services.googleapis.cn'
-  - 'xn--ngstr-lra8j.com'
-  - 'r3---sn-j5o76n7d.gvt1-cn.com'
-  - 'wb.miraheze.org'
-  - 'nwdan.com'
-  - 'meituan.net'
-  - 'h.trace.qq.com'
-  - 'prpr-muse-dash.peropero.net'
-  - 'report.tencentmusic.com'
-  - 'hb.kg.qq.com'
-  - 'imgheybox1.max-c.com'
-  - 'mmbiz.qpic.cn'
+  - '+.services.googleapis.cn'
+  - '+.xn--ngstr-lra8j.com'
+  - '+.r3---sn-j5o76n7d.gvt1-cn.com'
+  - '+.wb.miraheze.org'
+  - '+.nwdan.com'
+  - '+.meituan.net'
+  - '+.h.trace.qq.com'
+  - '+.prpr-muse-dash.peropero.net'
+  - '+.report.tencentmusic.com'
+  - '+.hb.kg.qq.com'
+  - '+.imgheybox1.max-c.com'
+  - '+.mmbiz.qpic.cn'
 ##xiaomi
-  - 'galleryapi.micloud.xiaomi.net'
-  - 'tracking.miui.com'
-  - 'tracker.xiaomixiaoai.com'
-  - 'weatherapi.market.xiaomi.com'
-  - 'sec.miui.com'
+  - '+.galleryapi.micloud.xiaomi.net'
+  - '+.tracking.miui.com'
+  - '+.tracker.xiaomixiaoai.com'
+  - '+.weatherapi.market.xiaomi.com'
+  - '+.sec.miui.com'
 ##mijia
-  - 'home.mi.com'
+  - '+.home.mi.com'
 ##wechat
-  - 'szextshort.weixin.qq.com'
+  - '+.szextshort.weixin.qq.com'
 ##xiaohongshu
-  - 'ads-img-al.xhscdn.com'
-  - 'live-source-play-hw.xhscdn.com'
+  - '+.ads-img-al.xhscdn.com'
+  - '+.live-source-play-hw.xhscdn.com'
 ##zhihu
-  - 'sugar.zhihu.com'
+  - '+.sugar.zhihu.com'
 ##coolapk
-  - 'image.coolapk.com'
+  - '+.image.coolapk.com'
 ##rizline
-  - 'rizlineassetstore.pigeongames.cn'
+  - '+.rizlineassetstore.pigeongames.cn'
 ##HIKARI FIELD
-  - 'store.hikarifield.co.jp'
+  - '+.store.hikarifield.co.jp'
 ##JD
-  - 'jd.com'
+  - '+.jd.com'
 ##xiaoheihe
-  - 'xiaoheihe.cn'
+  - '+.xiaoheihe.cn'
 ##steampy
-  - 'steampy.com'
+  - '+.steampy.com'
 ##truenas
-  - 'update.ixsystems.com'
+  - '+.update.ixsystems.com'
 ##tencentmap
-  - 'lhp.map.qq.com'
+  - '+.lhp.map.qq.com'
 ##
-  - 'rmbgame.net'
+  - '+.rmbgame.net'
 ##sudoku.coach
-  - 'sudoku.coach'
+  - '+.sudoku.coach'
 ##HP_cn
-  - 'hp-smart.cn'
+  - '+.hp-smart.cn'
+##tencent
+  - '+.p.qlogo.cn'
