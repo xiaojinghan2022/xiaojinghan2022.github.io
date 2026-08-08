@@ -1,5 +1,5 @@
 payload:
-  - 'chobit.cc'
+#  - 'chobit.cc'
   - '*.chobit.cc'
   - 'media.ci-en.jp'
   - '*.media.ci-en.jp'
