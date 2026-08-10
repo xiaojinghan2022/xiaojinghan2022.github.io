@@ -1,7 +1,11 @@
 [YAML]
 <proxy-groups>+:
   - name: Proxy
-    type: select
+    #type: select
+    type: url-test
+    url: "http://cp.cloudflare.com/generate_204"
+    interval: 300
+    fallback: DIRECT
     proxies:
       - Proxies
 <proxy-groups>*:
@@ -9,5 +13,5 @@
     name: '/^(?!.*(?:HK|SG|JP|US|TW|KR|Proxy|Proxies)).+$/'
     type: select
   set:
-    proxies:
+    +proxies:
       - Proxy
