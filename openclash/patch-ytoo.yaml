@@ -1,6 +1,12 @@
 [YAML]
-proxy-groups+:
+<proxy-groups>+:
   - name: Proxy
     type: select
     proxies:
       - Proxies
+<proxy-groups>*:
+  where:
+    type: select
+  set:
+    proxies:
+      - Proxy
