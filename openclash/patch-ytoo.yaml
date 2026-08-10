@@ -6,6 +6,7 @@
       - Proxies
 <proxy-groups>*:
   where:
+    name: '/^(?!.*(?:HK|SG|JP|US|TW|KR|Proxy|Proxies)).+$/'
     type: select
   set:
     proxies:
