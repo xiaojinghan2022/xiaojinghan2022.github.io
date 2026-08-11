@@ -34,7 +34,7 @@
 
 <proxy-groups>*:
   where:
-    name: '/^(?!.*(?:^HK$|^SG$|^JP$|^US$|^TW$|^KR$|^Proxy$|^Proxies$)).+$/'
+    name: '/^(?!.*(?:^HK$|^SG$|^JP$|^US$|^TW$|^KR$|^Proxy$|^Proxies$|DIRECT)).+$/'
     type: select
   set:
     +proxies:
