@@ -32,6 +32,14 @@
       - DIRECT
       - Steam
 
+<proxy-groups>*:
+  where:
+    name: '/^(?!.*(?:^HK$|^SG$|^JP$|^US$|^TW$|^KR$|^Proxy$|^Proxies$)).+$/'
+    type: select
+  set:
+    +proxies:
+      - Proxy
+
 domain_rule: &domain_rule
   type: http
   behavior: domain
