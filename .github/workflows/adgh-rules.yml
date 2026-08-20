@@ -34,7 +34,7 @@ jobs:
                         # 去掉开头的 '+.' 或 '.'（兼容两种格式）
                         domain=$(echo "$entry" | sed -E "s/^\+\.//; s/^\.//")
                         if [ -n "$domain" ] && [[ "$domain" != *\** ]]; then
-                            echo "||$domain^$dnstype=AAAA,dnsrewrite=NOERROR" >> adguardhome/adgh-rules.txt
+                            echo "||$domain^\$dnstype=AAAA,dnsrewrite=NOERROR" >> adguardhome/adgh-rules.txt
                         fi
                     done
                 done
