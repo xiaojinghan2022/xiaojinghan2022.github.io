@@ -1,0 +1,50 @@
+name: ADGH Rules
+
+on:
+    push:
+        paths:
+            - 'openclash/rule/*PROXYRule*.yaml'
+            - 'openclash/rule/*PROXYRule*.yml'
+
+jobs:
+    extract:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v7
+          - name : Install yq
+            run: |
+                wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq
+                chmod +x /usr/local/bin/yq
+          - name: Extract domains from PROXYRule YAMLs
+            run: |
+                mkdir -p adguardhome
+                > adguardhome/adgh-rules.txt
+                # 遍历所有文件名包含 PROXYRule 的 YAML 文件
+                find openclash/rule -type f \( -name "*PROXYRule*.yaml" -o -name "*PROXYRule*.yml" \) | while read -r file; do
+                    echo "Processing $file ..."
+                    # 使用 yq 提取 payload 数组的每个元素
+                    # 去掉 '+.' 和引号
+                    yq eval '.payload[]' "$file" | while read -r entry; do
+                        # 去掉可能的首尾空格和引号
+                        entry=$(echo "$entry" | sed "s/^['\"]//;s/['\"]$//")
+                        # 去掉开头的 '+.' 或 '.'（兼容两种格式）
+                        domain=$(echo "$entry" | sed -E "s/^\+\.//; s/^\.//")
+                        if [ -n "$domain" ] && [[ "$domain" != *\** ]]; then
+                            echo "||$domain^$dnstype=AAAA,dnsrewrite=NOERROR" >> adguardhome/adgh-rules.txt
+                        fi
+                    done
+                done
+                # 去重
+                sort -u adguardhome/adgh-rules.txt -o adguardhome/adgh-rules.txt
+
+          - name: Commit and push if changed
+            run: |
+                git config user.name "github-actions[bot]"
+                git config user.email "github-actions[bot]@users.noreply.github.com"
+                git add adguardhome/adgh-rules.txt
+                git diff --staged --quiet || git commit -m "Auto-generate AdGuardHome rules in adguardhome/ directory"
+                git push
