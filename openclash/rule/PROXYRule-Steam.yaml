@@ -1,6 +1,6 @@
 payload:
 #  - steam@cn
-  - '+.store.steampowered.com'
+#  - '+.store.steampowered.com'
   - '+.steamcommunity.com'
   - '+.steamgames.com'
   - '+.steamstatic.com'
