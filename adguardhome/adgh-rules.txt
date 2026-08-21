@@ -9,6 +9,7 @@
 ||dlsitestudio.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||lctx.top^$dnstype=AAAA,dnsrewrite=NOERROR
 ||nijiyome.jp^$dnstype=AAAA,dnsrewrite=NOERROR
+||openai.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||s.team^$dnstype=AAAA,dnsrewrite=NOERROR
 ||steamcommunity.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||steamgames.com^$dnstype=AAAA,dnsrewrite=NOERROR
