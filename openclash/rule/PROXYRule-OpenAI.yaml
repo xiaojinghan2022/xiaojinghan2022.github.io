@@ -1,4 +1,5 @@
 payload:
 ##openai
-  - '+.api.oaistatsig.com'
+  - '+.oaistatsig.com'
   - '+.openai.com'
+  - '+.chatgpt.com'
