@@ -1,5 +1,5 @@
 ||2.na.dl.wireshark.org^$dnstype=AAAA,dnsrewrite=NOERROR
-||api.oaistatsig.com^$dnstype=AAAA,dnsrewrite=NOERROR
+||chatgpt.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||chobit.cc^$dnstype=AAAA,dnsrewrite=NOERROR
 ||ci-en.jp^$dnstype=AAAA,dnsrewrite=NOERROR
 ||ci-en.net^$dnstype=AAAA,dnsrewrite=NOERROR
@@ -9,6 +9,7 @@
 ||dlsitestudio.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||lctx.top^$dnstype=AAAA,dnsrewrite=NOERROR
 ||nijiyome.jp^$dnstype=AAAA,dnsrewrite=NOERROR
+||oaistatsig.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||openai.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||s.team^$dnstype=AAAA,dnsrewrite=NOERROR
 ||steamcommunity.com^$dnstype=AAAA,dnsrewrite=NOERROR
