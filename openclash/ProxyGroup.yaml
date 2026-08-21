@@ -6,10 +6,6 @@
       - DIRECT
       - Proxy
       - HK
-      - JP
-      - SG
-      - TW
-      - US
   - name: DLsite
     type: select
     proxies:
