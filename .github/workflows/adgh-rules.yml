@@ -5,7 +5,7 @@ on:
         paths:
             - 'openclash/rule/*PROXYRule*.yaml'
             - 'openclash/rule/*PROXYRule*.yml'
-
+    workflow_dispatch:
 jobs:
     extract:
         runs-on: ubuntu-latest
@@ -28,13 +28,19 @@ jobs:
                     echo "Processing $file ..."
                     # 使用 yq 提取 payload 数组的每个元素
                     # 去掉 '+.' 和引号
-                    yq eval '.payload[]' "$file" | while read -r entry; do
+                    yq eval '.payload[]' "$file" 2>/dev/null | while read -r entry; do
                         # 去掉可能的首尾空格和引号
-                        entry=$(echo "$entry" | sed "s/^['\"]//;s/['\"]$//")
-                        # 去掉开头的 '+.' 或 '.'（兼容两种格式）
-                        domain=$(echo "$entry" | sed -E "s/^\+\.//; s/^\.//")
-                        if [ -n "$domain" ] && [[ "$domain" != *\** ]]; then
-                            echo "||$domain^\$dnstype=AAAA,dnsrewrite=NOERROR" >> adguardhome/adgh-rules.txt
+                        entry=$(echo "$entry" | sed "s/^['\"]//;s/['\"]$//;s/^[[:space:]]*//;s/[[:space:]]*$//")
+                        if [ -z "$entry" ]; then
+                        continue
+                        fi
+                        if [[ "$entry" == "+."* ]]; then
+                            domain=$(echo "$entry" | sed -E "s/^\+\.//")
+                            printf '||%s^$dnstype=AAAA,dnsrewrite=NOERROR\n' "$domain" >> adguardhome/adgh-rules.txt
+                        else
+                            # 纯域名（不含 +.）：精确匹配，只匹配域名本身
+                            domain="$entry"
+                            printf '|%s$dnstype=AAAA,dnsrewrite=NOERROR\n' "$domain" >> adguardhome/adgh-rules.txt
                         fi
                     done
                 done
