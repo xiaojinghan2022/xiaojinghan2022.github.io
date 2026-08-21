@@ -1,3 +1,4 @@
 payload:
 ##openai
   - '+.api.oaistatsig.com'
+  - '+.openai.com'
