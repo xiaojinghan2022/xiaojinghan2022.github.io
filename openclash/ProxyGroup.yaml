@@ -99,6 +99,7 @@ domain_rule: &domain_rule
   - RULE-SET,proxy_us,US
   - RULE-SET,proxy_openai,OpenAI
   - RULE-SET,proxy_dlsite,DLsite
+  - DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$,OpenAI
 #<rules>+:
 #  - GEOSITE,geolocation-!cn@cn,DIRECT
 #  - GEOSITE,geolocation-!cn,Proxy
