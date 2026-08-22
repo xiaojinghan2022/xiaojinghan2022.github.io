@@ -21,6 +21,7 @@
 ||dlsite.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||dlsite.jp^$dnstype=AAAA,dnsrewrite=NOERROR
 ||dlsitestudio.com^$dnstype=AAAA,dnsrewrite=NOERROR
+||gfw.report^$dnstype=AAAA,dnsrewrite=NOERROR
 ||host.livekit.cloud^$dnstype=AAAA,dnsrewrite=NOERROR
 ||lctx.top^$dnstype=AAAA,dnsrewrite=NOERROR
 ||nijiyome.jp^$dnstype=AAAA,dnsrewrite=NOERROR
