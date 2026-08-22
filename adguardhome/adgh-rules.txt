@@ -22,9 +22,13 @@
 ||dlsite.jp^$dnstype=AAAA,dnsrewrite=NOERROR
 ||dlsitestudio.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||gfw.report^$dnstype=AAAA,dnsrewrite=NOERROR
+||github.com^$dnstype=AAAA,dnsrewrite=NOERROR
+||github.io^$dnstype=AAAA,dnsrewrite=NOERROR
+||githubusercontent.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||host.livekit.cloud^$dnstype=AAAA,dnsrewrite=NOERROR
 ||itu.int^$dnstype=AAAA,dnsrewrite=NOERROR
 ||lctx.top^$dnstype=AAAA,dnsrewrite=NOERROR
+||nextcloud.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||nijiyome.jp^$dnstype=AAAA,dnsrewrite=NOERROR
 ||oaistatic.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||oaistatsig.com^$dnstype=AAAA,dnsrewrite=NOERROR
