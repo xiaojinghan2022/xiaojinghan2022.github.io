@@ -32,6 +32,11 @@
     proxies:
       - Proxy
       - DIRECT
+      - HK
+      - JP
+      - SG
+      - TW
+      - US
 
 <proxy-groups>*:
   where:
