@@ -37,3 +37,4 @@
 ||triokini.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||turn.livekit.cloud^$dnstype=AAAA,dnsrewrite=NOERROR
 ||unfiltered.adguard-dns.com^$dnstype=AAAA,dnsrewrite=NOERROR
+||v2ex.com^$dnstype=AAAA,dnsrewrite=NOERROR
