@@ -53,3 +53,5 @@ payload:
   - '+.hp-smart.cn'
 ##tencent
   - '+.p.qlogo.cn'
+##China Academy of Information and Communications Technology, CAICT
+  - '+.cnspeedtest.cn'
