@@ -3,3 +3,7 @@ payload:
   - '+.unfiltered.adguard-dns.com'
   - '+.v2ex.com'
   - '+.gfw.report'
+  ##development
+  - '+.github.com'
+  - '+.githubusercontent.com'
+  - '+.github.io'
