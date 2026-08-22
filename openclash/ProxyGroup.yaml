@@ -27,6 +27,11 @@
     proxies:
       - DIRECT
       - Steam
+  - name: Route-optimization
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
 
 <proxy-groups>*:
   where:
@@ -63,6 +68,10 @@ domain_rule: &domain_rule
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/XunLei.yaml
     path: ./rule_provider/XunLei.yaml
+  route-optimization:
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYRule-Route-optimization.yaml
+    path: ./rule_provider/PROXYRule-Route-optimization.yaml
   proxy_rule:
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYRule.yaml
@@ -90,6 +99,7 @@ domain_rule: &domain_rule
   - RULE-SET,direct_steam,DIRECT-Steam
   - RULE-SET,bilibili,Bilibili
   - RULE-SET,xunlei,XunLei
+  - RULE-SET,route-optimization,Route-optimization
   - RULE-SET,proxy_rule,Proxy
   - RULE-SET,proxy_steam,Steam
   - RULE-SET,proxy_us,US
