@@ -10,5 +10,5 @@ payload:
   - '+.github.blog'
   - '+.githubassets.com'
   - 'github.global.ssl.fastly.net'
-##AI
+  - '+.githubcopilot.com'
   - '+.huggingface.co'

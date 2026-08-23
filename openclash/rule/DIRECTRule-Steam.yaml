@@ -6,3 +6,4 @@ payload:
   - '+.test.steampowered.com'
 #  - '+.api.steampowered.com'
   - '+.st.dl.eccdnx.com'
+  - '+.steamconnecttest.com'
