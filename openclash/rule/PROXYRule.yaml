@@ -1,5 +1,4 @@
 payload:
-  - '+.lctx.top'
   - '+.unfiltered.adguard-dns.com'
   - '+.v2ex.com'
   - '+.gfw.report'
@@ -15,3 +14,5 @@ payload:
   - '+.claude.ai'
   - '+.claude.com'
   - '+.anthropic.com'
+
+  - '+.archive.org'

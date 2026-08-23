@@ -97,6 +97,10 @@ domain_rule: &domain_rule
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYRule-DLsite.yaml
     path: ./rule_provider/PROXYRule-DLsite.yaml
+  proxy_cloudflare:
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYRule-Cloudflare.yaml
+    path: ./rule_provider/PROXYRule-Cloudflare.yaml
 
 +<rules>:
   - RULE-SET,reject-list,REJECT
@@ -110,6 +114,7 @@ domain_rule: &domain_rule
   - RULE-SET,proxy_us,US
   - RULE-SET,proxy_openai,OpenAI
   - RULE-SET,proxy_dlsite,DLsite
+  - RULE-SET,proxy_cloudflare,Cloudflare
   - DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$,OpenAI
 #<rules>+:
 #  - GEOSITE,geolocation-!cn@cn,DIRECT

@@ -1,0 +1,21 @@
+payload:
+  - '+.cloudflare.com'
+  - '+.cloudflare.net'
+  #
+  - '+.cloudflare-dns.com'
+  - '+.one.one.one'
+  - '+.cloudflarewarp.com'
+  - '+.warp.plus'
+  - '+.cloudflareaccess.com'
+  - '+.cloudflareapps.com'
+  - '+.cloudflarestream.com'
+  - '+.videodelivery.net'
+  #
+  - '+.workers.dev'
+  - '+.pages.dev'
+  - '+.trycloudflare.com'
+  #
+  - '+.cloudflare-ipfs.com'
+  - '+.cf-ipfs.com'
+  - '+.cloudflareresolve.com'
+  - '+.cloudflarestorage.com'
