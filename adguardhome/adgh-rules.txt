@@ -10,6 +10,7 @@
 |production-openaicom-storage.azureedge.net$dnstype=AAAA,dnsrewrite=NOERROR
 |s.team$dnstype=AAAA,dnsrewrite=NOERROR
 ||2.na.dl.wireshark.org^$dnstype=AAAA,dnsrewrite=NOERROR
+||anthropic.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||chat.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||chatgpt.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||chatgpt.livekit.cloud^$dnstype=AAAA,dnsrewrite=NOERROR
@@ -17,6 +18,8 @@
 ||chobit.cc^$dnstype=AAAA,dnsrewrite=NOERROR
 ||ci-en.jp^$dnstype=AAAA,dnsrewrite=NOERROR
 ||ci-en.net^$dnstype=AAAA,dnsrewrite=NOERROR
+||claude.ai^$dnstype=AAAA,dnsrewrite=NOERROR
+||claude.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||crixet.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||dlaf.jp^$dnstype=AAAA,dnsrewrite=NOERROR
 ||dlsite.com^$dnstype=AAAA,dnsrewrite=NOERROR
