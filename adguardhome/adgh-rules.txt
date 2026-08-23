@@ -27,6 +27,7 @@
 ||github.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||github.io^$dnstype=AAAA,dnsrewrite=NOERROR
 ||githubassets.com^$dnstype=AAAA,dnsrewrite=NOERROR
+||githubcopilot.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||githubusercontent.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||host.livekit.cloud^$dnstype=AAAA,dnsrewrite=NOERROR
 ||huggingface.co^$dnstype=AAAA,dnsrewrite=NOERROR
