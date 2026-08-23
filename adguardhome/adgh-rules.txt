@@ -1,4 +1,5 @@
 |browser-intake-datadoghq.com$dnstype=AAAA,dnsrewrite=NOERROR
+|github.global.ssl.fastly.net$dnstype=AAAA,dnsrewrite=NOERROR
 |o33249.ingest.sentry.io$dnstype=AAAA,dnsrewrite=NOERROR
 |openai.qualtrics.com$dnstype=AAAA,dnsrewrite=NOERROR
 |openaiapi-site.azureedge.net$dnstype=AAAA,dnsrewrite=NOERROR
@@ -22,11 +23,13 @@
 ||dlsite.jp^$dnstype=AAAA,dnsrewrite=NOERROR
 ||dlsitestudio.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||gfw.report^$dnstype=AAAA,dnsrewrite=NOERROR
+||github.blog^$dnstype=AAAA,dnsrewrite=NOERROR
 ||github.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||github.io^$dnstype=AAAA,dnsrewrite=NOERROR
+||githubassets.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||githubusercontent.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||host.livekit.cloud^$dnstype=AAAA,dnsrewrite=NOERROR
-||itu.int^$dnstype=AAAA,dnsrewrite=NOERROR
+||huggingface.co^$dnstype=AAAA,dnsrewrite=NOERROR
 ||lctx.top^$dnstype=AAAA,dnsrewrite=NOERROR
 ||nextcloud.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||nijiyome.jp^$dnstype=AAAA,dnsrewrite=NOERROR
