@@ -3,7 +3,12 @@ payload:
   - '+.unfiltered.adguard-dns.com'
   - '+.v2ex.com'
   - '+.gfw.report'
-  ##development
+##development
   - '+.github.com'
   - '+.githubusercontent.com'
   - '+.github.io'
+  - '+.github.blog'
+  - '+.githubassets.com'
+  - 'github.global.ssl.fastly.net'
+##AI
+  - '+.huggingface.co'

@@ -5,11 +5,18 @@ payload:
   - '+.services.googleapis.cn'
   - '+.xn--ngstr-lra8j.com'
   - '+.r3---sn-j5o76n7d.gvt1-cn.com'
+##worldbox
   - '+.wb.miraheze.org'
+##
   - '+.nwdan.com'
+##meituan
+  - '+.meituan.com'
   - '+.meituan.net'
+##
   - '+.h.trace.qq.com'
+##musedash
   - '+.prpr-muse-dash.peropero.net'
+##
   - '+.report.tencentmusic.com'
   - '+.hb.kg.qq.com'
   - '+.imgheybox1.max-c.com'
