@@ -12,3 +12,6 @@ payload:
   - 'github.global.ssl.fastly.net'
   - '+.githubcopilot.com'
   - '+.huggingface.co'
+  - '+.claude.ai'
+  - '+.claude.com'
+  - '+.anthropic.com'
