@@ -62,3 +62,5 @@ payload:
   - '+.p.qlogo.cn'
 ##China Academy of Information and Communications Technology, CAICT
   - '+.cnspeedtest.cn'
+##connectivitycheck.gstatic.com
+  - '+.connectivitycheck.gstatic.com'
