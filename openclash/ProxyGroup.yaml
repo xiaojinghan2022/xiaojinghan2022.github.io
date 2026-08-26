@@ -101,10 +101,10 @@ domain_rule: &domain_rule
   - RULE-SET,proxy_openai,OpenAI
   - RULE-SET,proxy_dlsite,DLsite
   - RULE-SET,proxy_cloudflare,Cloudflare
-  - RULE-SET,direct_rule,DIRECT
   - RULE-SET,direct_steam,DIRECT-Steam
   - RULE-SET,bilibili,Bilibili
   - DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$,OpenAI
+  - RULE-SET,direct_rule,DIRECT
 #<rules>+:
 #  - GEOSITE,geolocation-!cn@cn,DIRECT
 #  - GEOSITE,geolocation-!cn,Proxy
