@@ -95,7 +95,6 @@ domain_rule: &domain_rule
 +<rules>:
   - RULE-SET,reject-list,REJECT
   - RULE-SET,route-optimization,Route-optimization
-  - RULE-SET,proxy_rule,Proxy
   - RULE-SET,proxy_steam,Steam
   - RULE-SET,proxy_us,US
   - RULE-SET,proxy_openai,OpenAI
@@ -104,6 +103,7 @@ domain_rule: &domain_rule
   - RULE-SET,direct_steam,DIRECT-Steam
   - RULE-SET,bilibili,Bilibili
   - DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$,OpenAI
+  - RULE-SET,proxy_rule,Proxy
   - RULE-SET,direct_rule,DIRECT
 #<rules>+:
 #  - GEOSITE,geolocation-!cn@cn,DIRECT
