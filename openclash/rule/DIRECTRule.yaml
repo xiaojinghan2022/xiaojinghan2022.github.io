@@ -43,6 +43,10 @@ payload:
   - '+.miui.com'
   - '+.xiaomi.net'
   - '+.xiaomixiaoai.com'
+  - '+.mijia.tech'
+  - '+.mi-img.com'
+  - '+.xiaomiyoupin.com'
+  - '+.mifile.cn'
 ##wechat
   - '+.szextshort.weixin.qq.com'
 ##xiaohongshu
