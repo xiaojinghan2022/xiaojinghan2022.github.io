@@ -1,11 +1,5 @@
 [YAML]
 <proxy-groups>+:
-  - name: XunLei
-    type: select
-    proxies:
-      - DIRECT
-      - Proxy
-      - HK
   - name: DLsite
     type: select
     proxies:
@@ -69,10 +63,6 @@ domain_rule: &domain_rule
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/Bilibili.yaml
     path: ./rule_provider/Bilibili.yaml
-  xunlei:
-    <<: *domain_rule
-    url: https://github.lctianxing.top/openclash/rule/XunLei.yaml
-    path: ./rule_provider/XunLei.yaml
   route-optimization:
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYRule-Route-optimization.yaml
@@ -114,7 +104,6 @@ domain_rule: &domain_rule
   - RULE-SET,direct_rule,DIRECT
   - RULE-SET,direct_steam,DIRECT-Steam
   - RULE-SET,bilibili,Bilibili
-  - RULE-SET,xunlei,XunLei
   - DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$,OpenAI
 #<rules>+:
 #  - GEOSITE,geolocation-!cn@cn,DIRECT
