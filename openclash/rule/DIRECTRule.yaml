@@ -1,27 +1,27 @@
 payload:
-##Bing
+## Bing
   - '+.cn.bing.com'
-##google play
+## google play
   - '+.services.googleapis.cn'
   - '+.xn--ngstr-lra8j.com'
   - '+.r3---sn-j5o76n7d.gvt1-cn.com'
-##worldbox
+## worldbox
   - '+.wb.miraheze.org'
 ##
   - '+.nwdan.com'
-##meituan
+## meituan
   - '+.meituan.com'
   - '+.meituan.net'
 ##
   - '+.h.trace.qq.com'
-##musedash
+## musedash
   - '+.prpr-muse-dash.peropero.net'
 ##
   - '+.report.tencentmusic.com'
   - '+.hb.kg.qq.com'
   - '+.imgheybox1.max-c.com'
   - '+.mmbiz.qpic.cn'
-##xiaomi
+## xiaomi
   # - '+.galleryapi.micloud.xiaomi.net'
   # - '+.tracking.miui.com'
   # - '+.tracker.xiaomixiaoai.com'
@@ -47,43 +47,45 @@ payload:
   - '+.mi-img.com'
   - '+.xiaomiyoupin.com'
   - '+.mifile.cn'
-##wechat
+## wechat
   - '+.szextshort.weixin.qq.com'
-##xiaohongshu
+## xiaohongshu
   - '+.ads-img-al.xhscdn.com'
   - '+.live-source-play-hw.xhscdn.com'
-##zhihu
+## zhihu
   - '+.sugar.zhihu.com'
-##coolapk
+## coolapk
   - '+.image.coolapk.com'
-##rizline
+## rizline
   - '+.rizlineassetstore.pigeongames.cn'
-##HIKARI FIELD
+## HIKARI FIELD
   - '+.store.hikarifield.co.jp'
-##JD
+## JD
   - '+.jd.com'
-##xiaoheihe
+## xiaoheihe
   - '+.xiaoheihe.cn'
-##steampy
+## steampy
   - '+.steampy.com'
-##truenas
+## truenas
   - '+.update.ixsystems.com'
-##tencentmap
+## tencentmap
   - '+.lhp.map.qq.com'
 ##
   - '+.rmbgame.net'
-##sudoku.coach
+## sudoku.coach
   - '+.sudoku.coach'
-##HP_cn
+## HP_cn
   - '+.hp-smart.cn'
-##tencent
+## tencent
   - '+.p.qlogo.cn'
-##China Academy of Information and Communications Technology, CAICT
+## China Academy of Information and Communications Technology, CAICT
   - '+.cnspeedtest.cn'
-##connectivitycheck.gstatic.com
+## connectivitycheck.gstatic.com
   - 'connectivitycheck.gstatic.com'
 ##
   - 'news.mydrivers.com'
-##ByteDance
+## ByteDance
   - 'p26-volcsearch-sign.byteimg.com'
   - 'p11-volcsearch-sign.byteimg.com'
+## via
+  - '+.viayoo.com'
