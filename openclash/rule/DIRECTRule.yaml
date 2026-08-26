@@ -22,13 +22,27 @@ payload:
   - '+.imgheybox1.max-c.com'
   - '+.mmbiz.qpic.cn'
 ##xiaomi
-  - '+.galleryapi.micloud.xiaomi.net'
-  - '+.tracking.miui.com'
-  - '+.tracker.xiaomixiaoai.com'
-  - '+.weatherapi.market.xiaomi.com'
-  - '+.sec.miui.com'
-##mijia
-  - '+.home.mi.com'
+  # - '+.galleryapi.micloud.xiaomi.net'
+  # - '+.tracking.miui.com'
+  # - '+.tracker.xiaomixiaoai.com'
+  # - '+.weatherapi.market.xiaomi.com'
+  # - '+.sec.miui.com'
+  # - 'api.transfer.search.miui.com'
+  # - 'check.engine.miui.com'
+  # - 'game.sec.miui.com'
+  # - 'flash.sec.miui.com'
+  # - 'hlth.io.mi.com'
+  # - 'query-suggestion.xiaomixiaoai.com'
+  # - 'speech.ai.xiaomi.com'
+  # - 'idm.iot.mi.com'
+  # - 'api.account.xiaomi.com'
+  # - 'account.xiaomi.com'
+  # - '+.home.mi.com'
+  - '+.mi.com'
+  - '+.xiaomi.com'
+  - '+.miui.com'
+  - '+.xiaomi.net'
+  - '+.xiaomixiaoai.com'
 ##wechat
   - '+.szextshort.weixin.qq.com'
 ##xiaohongshu
@@ -64,3 +78,8 @@ payload:
   - '+.cnspeedtest.cn'
 ##connectivitycheck.gstatic.com
   - 'connectivitycheck.gstatic.com'
+##
+  - 'news.mydrivers.com'
+##ByteDance
+  - 'p26-volcsearch-sign.byteimg.com'
+  - 'p11-volcsearch-sign.byteimg.com'
