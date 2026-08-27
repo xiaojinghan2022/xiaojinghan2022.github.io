@@ -113,7 +113,7 @@ ip_rule: &ip_rule
   - RULE-SET,direct_steam,DIRECT-Steam
   - RULE-SET,bilibili,Bilibili
   - DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$,OpenAI
-  - RULE-SET,proxy_ip_google,Google
+  - RULE-SET,proxy_ip_google,Google,no-resolve
   - RULE-SET,proxy_rule,Proxy
   - RULE-SET,direct_rule,DIRECT
 #<rules>+:
