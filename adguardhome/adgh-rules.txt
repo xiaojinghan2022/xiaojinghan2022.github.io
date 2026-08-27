@@ -44,6 +44,7 @@
 ||githubassets.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||githubcopilot.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||githubusercontent.com^$dnstype=AAAA,dnsrewrite=NOERROR
+||google.com.hk^$dnstype=AAAA,dnsrewrite=NOERROR
 ||host.livekit.cloud^$dnstype=AAAA,dnsrewrite=NOERROR
 ||huggingface.co^$dnstype=AAAA,dnsrewrite=NOERROR
 ||nextcloud.com^$dnstype=AAAA,dnsrewrite=NOERROR
