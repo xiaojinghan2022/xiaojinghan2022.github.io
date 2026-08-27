@@ -13,4 +13,5 @@ payload:
   - '+.bilibilipay.cn'
   - '+.maoer.com'
   - '+.hdslb.com'
-  
+  - 'grpc.biliapi.net'
+  - 'line3-h5-mobile-api.biligame.com'

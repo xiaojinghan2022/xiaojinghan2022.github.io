@@ -46,6 +46,12 @@ domain_rule: &domain_rule
   format: yaml
   interval: 86400
 
+ip_rule: &ip_rule
+  type: http
+  behavior: ip
+  format: yaml
+  interval: 86400
+
 +<rule-providers>:
   reject-list:
     <<: *domain_rule
@@ -91,6 +97,10 @@ domain_rule: &domain_rule
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYRule-Cloudflare.yaml
     path: ./rule_provider/PROXYRule-Cloudflare.yaml
+  proxy_ip_google:
+    <<: *ip_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYIP-GOOLE.yaml
+    path: ./rule_provider/PROXYIP-GOOLE.yaml
 
 +<rules>:
   - RULE-SET,reject-list,REJECT
@@ -103,6 +113,7 @@ domain_rule: &domain_rule
   - RULE-SET,direct_steam,DIRECT-Steam
   - RULE-SET,bilibili,Bilibili
   - DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$,OpenAI
+  - RULE-SET,proxy_ip_google,Google
   - RULE-SET,proxy_rule,Proxy
   - RULE-SET,direct_rule,DIRECT
 #<rules>+:
