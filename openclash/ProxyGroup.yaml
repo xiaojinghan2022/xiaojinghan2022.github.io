@@ -48,7 +48,7 @@ domain_rule: &domain_rule
 
 ip_rule: &ip_rule
   type: http
-  behavior: ip
+  behavior: ipcidr
   format: yaml
   interval: 86400
 
