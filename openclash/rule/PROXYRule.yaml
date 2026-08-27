@@ -14,5 +14,5 @@ payload:
   - '+.claude.ai'
   - '+.claude.com'
   - '+.anthropic.com'
-
+  - 'opensource.guide'
   - '+.archive.org'
