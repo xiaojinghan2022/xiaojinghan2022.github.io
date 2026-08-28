@@ -17,3 +17,4 @@ payload:
   - 'opensource.guide'
   - '+.archive.org'
   - '+.foldersync.io'
+  - '+.docker.io'
