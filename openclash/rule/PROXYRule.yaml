@@ -17,6 +17,7 @@ payload:
   - 'opensource.guide'
   - '+.archive.org'
   - '+.foldersync.io'
+#docker
   - '+.docker.io'
   - '+.docker.com'
 #dns
