@@ -44,13 +44,13 @@ domain_rule: &domain_rule
   type: http
   behavior: domain
   format: yaml
-  interval: 86400
+  interval: 43200
 
 ip_rule: &ip_rule
   type: http
   behavior: ipcidr
   format: yaml
-  interval: 86400
+  interval: 43200
 
 +<rule-providers>:
   reject-list:
