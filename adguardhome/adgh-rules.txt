@@ -10,6 +10,7 @@
 |opensource.guide$dnstype=AAAA,dnsrewrite=NOERROR
 |production-openaicom-storage.azureedge.net$dnstype=AAAA,dnsrewrite=NOERROR
 |s.team$dnstype=AAAA,dnsrewrite=NOERROR
+||1e100.net^$dnstype=AAAA,dnsrewrite=NOERROR
 ||2.na.dl.wireshark.org^$dnstype=AAAA,dnsrewrite=NOERROR
 ||anthropic.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||archive.org^$dnstype=AAAA,dnsrewrite=NOERROR
