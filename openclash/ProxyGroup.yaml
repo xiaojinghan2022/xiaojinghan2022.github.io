@@ -101,6 +101,10 @@ ip_rule: &ip_rule
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYRule-Google.yaml
     path: ./rule_provider/PROXYRule-Google.yaml
+  proxy_ip:
+    <<: *ip_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYIP.yaml
+    path: ./rule_provider/PROXYIP.yaml
   proxy_ip_google:
     <<: *ip_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYIP-Google.yaml
@@ -124,6 +128,7 @@ ip_rule: &ip_rule
   - RULE-SET,proxy_google,Google
   - RULE-SET,proxy_ip_google,Google,no-resolve
   - RULE-SET,proxy_ip_cloudflare,Cloudflare,no-resolve
+  - RULE-SET,proxy_ip,Proxy,no-resolve
   - RULE-SET,proxy_rule,Proxy
   - RULE-SET,direct_rule,DIRECT
 #<rules>+:
