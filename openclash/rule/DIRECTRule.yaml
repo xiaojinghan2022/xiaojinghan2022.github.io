@@ -91,3 +91,5 @@ payload:
   - '+.viayoo.com'
 ##qwen
   - '+.qwen.ai'
+##dns
+  - 'dns.weibo.cn'
