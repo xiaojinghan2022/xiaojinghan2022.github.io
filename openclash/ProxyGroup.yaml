@@ -101,6 +101,10 @@ ip_rule: &ip_rule
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYRule-Google.yaml
     path: ./rule_provider/PROXYRule-Google.yaml
+  proxy_microsoft:
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYRule-Microsoft.yaml
+    path: ./rule_provider/PROXYRule-Microsoft.yaml
   proxy_ip:
     <<: *ip_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYIP.yaml
@@ -122,6 +126,7 @@ ip_rule: &ip_rule
   - RULE-SET,proxy_openai,OpenAI
   - RULE-SET,proxy_dlsite,DLsite
   - RULE-SET,proxy_cloudflare,Cloudflare
+  - RULE-SET,proxy_microsoft,Microsoft
   - RULE-SET,direct_steam,DIRECT-Steam
   - RULE-SET,bilibili,Bilibili
   - DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$,OpenAI
