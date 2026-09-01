@@ -1,5 +1,6 @@
 |browser-intake-datadoghq.com$dnstype=AAAA,dnsrewrite=NOERROR
 |github.global.ssl.fastly.net$dnstype=AAAA,dnsrewrite=NOERROR
+|login.live.com$dnstype=AAAA,dnsrewrite=NOERROR
 |o33249.ingest.sentry.io$dnstype=AAAA,dnsrewrite=NOERROR
 |openai.qualtrics.com$dnstype=AAAA,dnsrewrite=NOERROR
 |openaiapi-site.azureedge.net$dnstype=AAAA,dnsrewrite=NOERROR
