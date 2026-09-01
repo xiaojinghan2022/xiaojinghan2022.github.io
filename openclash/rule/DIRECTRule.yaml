@@ -90,6 +90,6 @@ payload:
 ## via
   - '+.viayoo.com'
 ##qwen
-  - '+.qwen.ai'
+
 ##dns
   - 'dns.weibo.cn'
