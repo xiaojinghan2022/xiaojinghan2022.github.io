@@ -93,3 +93,5 @@ payload:
 
 ##dns
   - 'dns.weibo.cn'
+##ubiquiti
+  - '+.uwn.com'
