@@ -105,6 +105,10 @@ ip_rule: &ip_rule
     <<: *domain_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYRule-Microsoft.yaml
     path: ./rule_provider/PROXYRule-Microsoft.yaml
+  proxy_telegram:
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYRule-Telegram.yaml
+    path: ./rule_provider/PROXYRule-Telegram.yaml
   proxy_ip:
     <<: *ip_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYIP.yaml
@@ -117,6 +121,10 @@ ip_rule: &ip_rule
     <<: *ip_rule
     url: https://github.lctianxing.top/openclash/rule/PROXYIP-Cloudflare.yaml
     path: ./rule_provider/PROXYIP-Cloudflare.yaml
+  proxy_ip_telegram:
+    <<: *ip_rule
+    url: https://github.lctianxing.top/openclash/rule/PROXYIP-Telegram.yaml
+    path: ./rule_provider/PROXYIP-Telegram.yaml
 
 +<rules>:
   - RULE-SET,reject-list,REJECT
@@ -127,12 +135,14 @@ ip_rule: &ip_rule
   - RULE-SET,proxy_dlsite,DLsite
   - RULE-SET,proxy_cloudflare,Cloudflare
   - RULE-SET,proxy_microsoft,Microsoft
+  - RULE-SET,proxy_google,Google
+  - RULE-SET,proxy_telegram,Telegram
   - RULE-SET,direct_steam,DIRECT-Steam
   - RULE-SET,bilibili,Bilibili
   - DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$,OpenAI
-  - RULE-SET,proxy_google,Google
   - RULE-SET,proxy_ip_google,Google,no-resolve
   - RULE-SET,proxy_ip_cloudflare,Cloudflare,no-resolve
+  - RULE-SET,proxy_ip_telegram,Telegram,no-resolve
   - RULE-SET,proxy_ip,Proxy,no-resolve
   - RULE-SET,proxy_rule,Proxy
   - RULE-SET,direct_rule,DIRECT
