@@ -68,6 +68,11 @@
 ||steamgames.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||steampowered.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||steamstatic.com^$dnstype=AAAA,dnsrewrite=NOERROR
+||t.me^$dnstype=AAAA,dnsrewrite=NOERROR
+||telegram.dog^$dnstype=AAAA,dnsrewrite=NOERROR
+||telegram.me^$dnstype=AAAA,dnsrewrite=NOERROR
+||telegram.org^$dnstype=AAAA,dnsrewrite=NOERROR
+||telegram.space^$dnstype=AAAA,dnsrewrite=NOERROR
 ||triokini.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||trycloudflare.com^$dnstype=AAAA,dnsrewrite=NOERROR
 ||turn.livekit.cloud^$dnstype=AAAA,dnsrewrite=NOERROR
