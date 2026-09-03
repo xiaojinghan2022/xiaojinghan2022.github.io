@@ -22,3 +22,5 @@ payload:
   - '+.docker.com'
 #dns
   - '+.dpdns.org'
+#xda
+  - '+.xdaforums.com'
