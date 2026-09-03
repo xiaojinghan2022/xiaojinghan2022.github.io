@@ -81,3 +81,4 @@
 ||videodelivery.net^$dnstype=AAAA,dnsrewrite=NOERROR
 ||warp.plus^$dnstype=AAAA,dnsrewrite=NOERROR
 ||workers.dev^$dnstype=AAAA,dnsrewrite=NOERROR
+||xdaforums.com^$dnstype=AAAA,dnsrewrite=NOERROR
