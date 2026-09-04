@@ -90,8 +90,14 @@ payload:
 ## via
   - '+.viayoo.com'
 ##qwen
-
+  - '+.qianwen.com'
 ##dns
   - 'dns.weibo.cn'
 ##ubiquiti
   - '+.uwn.com'
+## geekerwan
+  - '+.socpk.com'
+## lazada
+  - '+.lazada.com.my'
+  - '+.umlazada.alibaba.com'
+  - '+.lazcdn.com'
