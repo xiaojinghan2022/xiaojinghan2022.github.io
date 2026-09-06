@@ -78,6 +78,7 @@ jobs:
 
                 chmod +x merge_ipcidr.py
                 mkdir -p openclash
+                # python3 merge_ipcidr.py < openclash/YAML > openclash/SRC-IPCIDR
                 cat openclash/YAML | python3 merge_ipcidr.py > openclash/SRC-IPCIDR
             - name: Commit and push changes
               run: |
@@ -87,7 +88,7 @@ jobs:
                     cat merge_ipcidr.py
                     exit 1
                 fi
-                sed -i $'1i[YAML]\n+<rules>:' openclash/SRC-IPCIDR
+                sed -i '1i[YAML]\n+<rules>:' openclash/SRC-IPCIDR
                 git config user.name "github-actions[bot]"
                 git config user.email "github-actions[bot]@users.noreply.github.com"
                 git add openclash/SRC-IPCIDR
