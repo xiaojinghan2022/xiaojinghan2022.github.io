@@ -20,34 +20,36 @@ jobs:
                     echo "Error: openclash/YAML Not found"
                     exit 1
                 fi
+                awk -v exc_file="openclash/YAML" '
+                    BEGIN { while((getline < exc_file) > 0) exc[$0]=1 }
+                    END {
+                        for(i=0;i<256;i++) {
+                            for(j=0;j<256;j++) {
+                                ip="192.168."i"."j
+                                if (!(ip in exc)) print ip
+                            }
+                            ip="10.8.0."i
+                            if (!(ip in exc)) print ip
+                            ip="10.253.0."i
+                            if (!(ip in exc)) print ip
+                        }    
+                    }' /dev/null > full_ips.txt
                 cat > merge_ipcidr.py <<'EOF'
                 #!/usr/bin/env python3
                 import sys
-                import re
                 import ipaddress
-
-                def is_enabled_line(line):
-                    # 空行忽略；行首有 # 表示禁用
-                    stripped = line.strip()
-                    if not stripped:
-                        return False
-                    if stripped.startswith('#'):
-                        return False
-                    return True
-
-                def extract_ip(line):
-                    m = re.search(r'\b(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\b', line)
-                    return m.group(1) if m else None
 
                 def main():
                     enabled_ips = set()
 
                     for line in sys.stdin:
-                        if not is_enabled_line(line):
+                        ip_str = line.strip()
+                        if not ip_str:
                             continue
-                        ip_str = extract_ip(line)
-                        if ip_str:
+                        try:
                             enabled_ips.add(ipaddress.ip_address(ip_str))
+                        except ValueError:
+                            continue
 
                     if not enabled_ips:
                         return
@@ -78,7 +80,7 @@ jobs:
 
                 chmod +x merge_ipcidr.py
                 mkdir -p openclash
-                python3 merge_ipcidr.py < openclash/YAML > openclash/SRC-IPCIDR
+                python3 merge_ipcidr.py < full_ips.txt > openclash/SRC-IPCIDR
             - name: Commit and push changes
               run: |
                 if [ ! -s openclash/SRC-IPCIDR ]; then
