@@ -78,11 +78,13 @@ jobs:
 
                 chmod +x merge_ipcidr.py
                 mkdir -p openclash
-                python3 merge_ipcidr.py < openclash/YAML > openclash/SRC-IPCIDR
+                cat openclash/YAML | python3 merge_ipcidr.py > openclash/SRC-IPCIDR
             - name: Commit and push changes
               run: |
                 if [ ! -s openclash/SRC-IPCIDR ]; then
                     echo "Output file is empty. Exiting with error."
+                    cat openclash/SRC-IPCIDR
+                    cat merge_ipcidr.py
                     exit 1
                 fi
                 sed -i $'1i[YAML]\n+<rules>:' openclash/SRC-IPCIDR
