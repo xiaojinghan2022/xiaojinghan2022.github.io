@@ -73,7 +73,7 @@ jobs:
                 EOF > merge_ipcidr.py
                 chmod +x merge_ipcidr.py
                 mkdir -p openclash
-                python3 merge_ipcidr.py < openclash/YAML >> openclash/SRC-IPCIDR
+                python3 merge_ipcidr.py < openclash/YAML > openclash/SRC-IPCIDR
             - name: Commit and push changes
               run: |
                 if [ ! -s openclash/SRC-IPCIDR ]; then
