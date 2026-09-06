@@ -32,7 +32,7 @@ jobs:
                             if (!(ip in exc)) print ip
                             ip="10.253.0."i
                             if (!(ip in exc)) print ip
-                        }    
+                        }
                     }' /dev/null > full_ips.txt
                 cat > merge_ipcidr.py <<'EOF'
                 #!/usr/bin/env python3
