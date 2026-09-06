@@ -71,6 +71,7 @@ jobs:
                 if __name__ == "__main__":
                     main()
                 EOF > merge_ipcidr.py
+
                 chmod +x merge_ipcidr.py
                 mkdir -p openclash
                 if [ ! -f openclash/YAML ]; then
