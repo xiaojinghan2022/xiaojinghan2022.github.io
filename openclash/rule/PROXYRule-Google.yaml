@@ -1,3 +1,7 @@
 payload:
   - '+.google.com.hk'
   - '+.1e100.net'
+  # firebase
+  - 'firebaseinstallations.googleapis.com'
+  - 'remoteprovisioning.googleapis.com'
+  - 'android.googleapis.com'
