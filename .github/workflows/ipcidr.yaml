@@ -17,7 +17,7 @@ jobs:
             - name: Merge ipcidr rules
               run: |
                 set -x
-                cat <<'EOF'
+                cat <<EOF
                 #!/usr/bin/env python3
                 import sys
                 import re
