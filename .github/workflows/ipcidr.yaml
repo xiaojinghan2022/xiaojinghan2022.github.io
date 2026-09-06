@@ -73,6 +73,10 @@ jobs:
                 EOF > merge_ipcidr.py
                 chmod +x merge_ipcidr.py
                 mkdir -p openclash
+                if [ ! -f openclash/YAML ]; then
+                    echo "Error: openclash/YAML Not found"
+                    exit 1
+                fi
                 python3 merge_ipcidr.py < openclash/YAML > openclash/SRC-IPCIDR
             - name: Commit and push changes
               run: |
