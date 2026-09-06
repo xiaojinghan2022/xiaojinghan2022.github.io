@@ -1,0 +1,88 @@
+name: merge ipcidr rules
+on:
+    push:
+        paths:
+            - 'openclash/YAML'
+    workflow_dispatch:
+jobs:
+    merge-ipcidr:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v7
+            - name: Set up Python
+              uses: actions/setup-python@v7
+              with:
+                python-version: '3.x'
+            - name: Merge ipcidr rules
+              run: |
+                cat <<'EOF'
+                #!/usr/bin/env python3
+                import sys
+                import re
+                import ipaddress
+
+                def is_enabled_line(line):
+                    # 空行忽略；行首有 # 表示禁用
+                    stripped = line.strip()
+                    if not stripped:
+                        return False
+                    if stripped.startswith('#'):
+                        return False
+                    return True
+
+                def extract_ip(line):
+                    m = re.search(r'\b(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\b', line)
+                    return m.group(1) if m else None
+
+                def main():
+                    enabled_ips = set()
+
+                    for line in sys.stdin:
+                        if not is_enabled_line(line):
+                            continue
+                        ip_str = extract_ip(line)
+                        if ip_str:
+                            enabled_ips.add(ipaddress.ip_address(ip_str))
+
+                    if not enabled_ips:
+                        return
+
+                    sorted_ips = sorted(enabled_ips)
+
+                    # 按连续 IP 分组
+                    ranges = []
+                    start = sorted_ips[0]
+                    prev = sorted_ips[0]
+
+                    for ip in sorted_ips[1:]:
+                        if ip == prev + 1:
+                            prev = ip
+                        else:
+                            ranges.append((start, prev))
+                            start = prev = ip
+                    ranges.append((start, prev))
+
+                    # 把每个连续段转成最小 CIDR
+                    for start, end in ranges:
+                        for net in ipaddress.summarize_address_range(start, end):
+                            print(f"  - SRC-IP-CIDR, {net},DIRECT")
+
+                if __name__ == "__main__":
+                    main()
+                EOF > merge_ipcidr.py
+                chmod +x merge_ipcidr.py
+                mkdir -p openclash
+                python3 merge_ipcidr.py < openclash/YAML >> openclash/SRC-IPCIDR
+            - name: Commit and push changes
+              run: |
+                if [ ! -s openclash/SRC-IPCIDR ]; then
+                  echo "Output file is empty. Exiting with error."
+                  exit 1
+                fi
+                sed -i $'1i[YAML]\n+<rules>:' openclash/SRC-IPCIDR
+                git config user.name "github-actions[bot]"
+                git config user.email "github-actions[bot]@users.noreply.github.com"
+                git add openclash/SRC-IPCIDR
+                git diff --staged --quiet || git commit -m "Update ipcidr rules"
+                git push

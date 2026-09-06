@@ -89,11 +89,11 @@ payload:
   - 'p11-volcsearch-sign.byteimg.com'
 ## via
   - '+.viayoo.com'
-##qwen
+## qwen
   - '+.qianwen.com'
-##dns
+## dns
   - 'dns.weibo.cn'
-##ubiquiti
+## ubiquiti
   - '+.uwn.com'
 ## geekerwan
   - '+.socpk.com'
