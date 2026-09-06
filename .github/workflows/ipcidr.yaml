@@ -78,8 +78,8 @@ jobs:
               run: |
                 if [ ! -s openclash/SRC-IPCIDR ]; then
                     echo "Output file is empty. Exiting with error."
-                    cat openclash/SRC-IPCIDR
-                    cat merge_ipcidr.py
+                    echo "$(< openclash/SRC-IPCIDR)"
+                    echo "$(< merge_ipcidr.py)"
                     exit 1
                 fi
                 sed -i $'1i[YAML]\n+<rules>:' openclash/SRC-IPCIDR
