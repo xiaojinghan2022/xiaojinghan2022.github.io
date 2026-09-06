@@ -1,4 +1,6 @@
+|android.googleapis.com$dnstype=AAAA,dnsrewrite=NOERROR
 |browser-intake-datadoghq.com$dnstype=AAAA,dnsrewrite=NOERROR
+|firebaseinstallations.googleapis.com$dnstype=AAAA,dnsrewrite=NOERROR
 |github.global.ssl.fastly.net$dnstype=AAAA,dnsrewrite=NOERROR
 |login.live.com$dnstype=AAAA,dnsrewrite=NOERROR
 |o33249.ingest.sentry.io$dnstype=AAAA,dnsrewrite=NOERROR
@@ -10,6 +12,7 @@
 |openaicomproductionae4b.blob.core.windows.net$dnstype=AAAA,dnsrewrite=NOERROR
 |opensource.guide$dnstype=AAAA,dnsrewrite=NOERROR
 |production-openaicom-storage.azureedge.net$dnstype=AAAA,dnsrewrite=NOERROR
+|remoteprovisioning.googleapis.com$dnstype=AAAA,dnsrewrite=NOERROR
 |s.team$dnstype=AAAA,dnsrewrite=NOERROR
 ||1e100.net^$dnstype=AAAA,dnsrewrite=NOERROR
 ||2.na.dl.wireshark.org^$dnstype=AAAA,dnsrewrite=NOERROR
