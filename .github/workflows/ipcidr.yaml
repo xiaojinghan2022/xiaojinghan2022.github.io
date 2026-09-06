@@ -80,6 +80,9 @@ jobs:
                     exit 1
                 fi
                 python3 merge_ipcidr.py < openclash/YAML > openclash/SRC-IPCIDR
+                echo "=== 生成的文件内容 ==="
+                cat openclash/SRC-IPCIDR
+                echo "=== 文件行数: $(wc -l < openclash/SRC-IPCIDR) ==="
             - name: Commit and push changes
               run: |
                 if [ ! -s openclash/SRC-IPCIDR ]; then
