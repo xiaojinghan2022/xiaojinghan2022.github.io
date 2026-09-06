@@ -16,8 +16,11 @@ jobs:
                 python-version: '3.x'
             - name: Merge ipcidr rules
               run: |
-                set -x
-                cat <<-'EOF'
+                if [ ! -f openclash/YAML ]; then
+                    echo "Error: openclash/YAML Not found"
+                    exit 1
+                fi
+                cat > merge_ipcidr.py <<'EOF'
                 #!/usr/bin/env python3
                 import sys
                 import re
@@ -71,24 +74,15 @@ jobs:
 
                 if __name__ == "__main__":
                     main()
-                EOF > merge_ipcidr.py
+                EOF
 
                 chmod +x merge_ipcidr.py
                 mkdir -p openclash
-                if [ ! -f openclash/YAML ]; then
-                    echo "Error: openclash/YAML Not found"
-                    exit 1
-                fi
                 python3 merge_ipcidr.py < openclash/YAML > openclash/SRC-IPCIDR
-                echo "=== 生成的文件内容 ==="
-                cat openclash/SRC-IPCIDR
-                echo "=== 文件行数: $(wc -l < openclash/SRC-IPCIDR) ==="
             - name: Commit and push changes
               run: |
                 if [ ! -s openclash/SRC-IPCIDR ]; then
                     echo "Output file is empty. Exiting with error."
-                    echo "$(< openclash/SRC-IPCIDR)"
-                    echo "$(< merge_ipcidr.py)"
                     exit 1
                 fi
                 sed -i $'1i[YAML]\n+<rules>:' openclash/SRC-IPCIDR
