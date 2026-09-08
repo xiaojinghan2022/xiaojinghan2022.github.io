@@ -31,3 +31,12 @@ proxy-groups*:
       - 'TW'
       - 'US'
       - 'KR'
+<proxy-groups>*:
+  where:
+    name: '/^(?!.*(?:^HK$|^SG$|^JP$|^US$|^TW$|^KR$|^Proxy$|^Proxies$|DIRECT)).+$/'
+    type: select
+  set:
+    +proxies:
+      - Proxy
+    -proxies:
+      - Proxies

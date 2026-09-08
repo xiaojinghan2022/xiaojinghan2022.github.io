@@ -32,14 +32,6 @@
       - TW
       - US
 
-<proxy-groups>*:
-  where:
-    name: '/^(?!.*(?:^HK$|^SG$|^JP$|^US$|^TW$|^KR$|^Proxy$|^Proxies$|DIRECT)).+$/'
-    type: select
-  set:
-    +proxies:
-      - Proxy
-
 domain_rule: &domain_rule
   type: http
   behavior: domain
@@ -155,8 +147,5 @@ ip_rule: &ip_rule
 
 dns:
   <fake-ip-filter>+:
-    - +.511495.xyz
-    - +.lctx.top
-    - +.lctianxing.top
     - geosite:connectivity-check
     - geosite:private
