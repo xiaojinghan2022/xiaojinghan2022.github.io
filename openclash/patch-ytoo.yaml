@@ -9,7 +9,7 @@ proxy-groups+:
     #type: select
     type: url-test
     url: "https://www.gstatic.com/generate_204"
-    interval: 300
+    interval: 150
     fallback: DIRECT
     proxies:
       - Proxies
@@ -38,5 +38,5 @@ proxy-groups*:
   set:
     +proxies:
       - Proxy
-    -proxies:
+    proxies-:
       - Proxies
