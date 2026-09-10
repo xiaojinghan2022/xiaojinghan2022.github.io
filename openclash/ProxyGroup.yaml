@@ -45,6 +45,10 @@ ip_rule: &ip_rule
   interval: 43200
 
 +<rule-providers>:
+  bypass-list:
+    <<: *domain_rule
+    url: https://github.lctianxing.top/openclash/rule/bypass.yaml
+    path: ./rule_provider/bypass.yaml
   reject-list:
     <<: *domain_rule
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
@@ -119,6 +123,7 @@ ip_rule: &ip_rule
     path: ./rule_provider/PROXYIP-Telegram.yaml
 
 +<rules>:
+  - RULE-SET,bypass-list,DIRECT
   - RULE-SET,reject-list,REJECT
   - RULE-SET,route-optimization,Route-optimization
   - RULE-SET,proxy_steam,Steam
