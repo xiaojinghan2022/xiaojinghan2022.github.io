@@ -152,5 +152,6 @@ ip_rule: &ip_rule
 
 dns:
   <fake-ip-filter>+:
+    - +.lctianxing.top
     - geosite:connectivity-check
     - geosite:private
