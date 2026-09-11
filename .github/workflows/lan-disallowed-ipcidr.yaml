@@ -1,8 +1,8 @@
 name: merge disallowed ipcidr rules
 on:
-    push:
-        paths:
-            - 'openclash/YAML'
+    # push:
+    #     paths:
+    #         - 'openclash/YAML'
     workflow_dispatch:
 jobs:
     merge-ipcidr:
