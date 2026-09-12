@@ -153,5 +153,6 @@ ip_rule: &ip_rule
 dns:
   <fake-ip-filter>+:
     - +.lctianxing.top
+    - +.dynv6.com
     - geosite:connectivity-check
     - geosite:private
