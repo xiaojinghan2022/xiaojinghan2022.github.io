@@ -1,12 +1,18 @@
-name: merge ipcidr rules
+name: merge disallowed ipcidr rules
 on:
     push:
         paths:
             - 'openclash/YAML'
+            - 'openclash/YAML-FS'
     workflow_dispatch:
 jobs:
     merge-ipcidr:
         runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        concurrency:
+            group: merge-ipcidr-${{ github.ref }}
+            cancel-in-progress: false
         steps:
             - name: Checkout repository
               uses: actions/checkout@v7
@@ -16,29 +22,14 @@ jobs:
                 python-version: '3.x'
             - name: Merge ipcidr rules
               run: |
-                if [ ! -f openclash/YAML ]; then
-                    echo "Error: openclash/YAML Not found"
-                    exit 1
-                fi
-                awk -v exc_file="openclash/YAML" '
-                    BEGIN { while((getline < exc_file) > 0) exc[$0]=1 }
-                    END {
-                        for(i=0;i<256;i++) {
-                            for(j=0;j<256;j++) {
-                                ip="192.168."i"."j
-                                if (!(ip in exc)) print ip
-                            }
-                            ip="10.8.0."i
-                            if (!(ip in exc)) print ip
-                            ip="10.253.0."i
-                            if (!(ip in exc)) print ip
-                        }
-                    }' /dev/null > full_ips.txt
-                cat > merge_ipcidr.py <<'EOF'
+                TMP_DIR=${RUNNER_TEMP:-/tmp}
+                mkdir -p openclash
+                cat > "${TMP_DIR}/merge_ips.py" <<'EOF'
                 #!/usr/bin/env python3
                 import sys
                 import ipaddress
 
+                mode = sys.argv[1] if len(sys.argv) > 1 else "src"
                 def main():
                     enabled_ips = set()
 
@@ -72,24 +63,46 @@ jobs:
                     # 把每个连续段转成最小 CIDR
                     for start, end in ranges:
                         for net in ipaddress.summarize_address_range(start, end):
-                            print(f"  - SRC-IP-CIDR, {net},DIRECT")
+                            if mode == "src":
+                                print(f"  - SRC-IP-CIDR, {net},DIRECT")
+                            else:
+                                print(f"  - {net}")
 
                 if __name__ == "__main__":
                     main()
                 EOF
 
-                chmod +x merge_ipcidr.py
-                mkdir -p openclash
-                python3 merge_ipcidr.py < full_ips.txt > openclash/SRC-IPCIDR
+                makeDISALLOWEDIPSList() {
+                    [ ! -f "openclash/$1$2" ] && echo "Error: openclash/$1$2 files not found" && exit 1
+                    awk -v exc_file="openclash/$1$2" '
+                    BEGIN { while((getline < exc_file) > 0) exc[$0]=1 }
+                    END {
+                        for(i=0;i<256;i++) {
+                            for(j=0;j<256;j++) {
+                                ip="192.168."i"."j
+                                if (!(ip in exc)) print ip
+                            }
+                            ip="10.8.0."i
+                            if (!(ip in exc)) print ip
+                            ip="10.253.0."i
+                            if (!(ip in exc)) print ip
+                        }
+                    }' /dev/null > "${TMP_DIR}/full_ips_$1$2.txt"
+                    python3 "${TMP_DIR}/merge_ips.py" disallow < "${TMP_DIR}/full_ips_$1$2.txt" > "openclash/DISALLOWED-IPS$2"
+                    [ ! -s "openclash/DISALLOWED-IPS$2" ] && echo "Output file openclash/DISALLOWED-IPS$2 is empty. Exiting with error." && exit 1
+                    sed -i '1i[YAML]\n<lan-disallowed-ips>+:' "openclash/DISALLOWED-IPS$2"
+                    git add openclash/DISALLOWED-IPS$2
+
+                    python3 "${TMP_DIR}/merge_ips.py" src < "${TMP_DIR}/full_ips_$1$2.txt" > "openclash/SRC-IPCIDR$2"
+                    [ ! -s "openclash/SRC-IPCIDR$2" ] && echo "Output file openclash/SRC-IPCIDR$2 is empty. Exiting with error." && exit 1
+                    sed -i '1i[YAML]\n+<rules>:' "openclash/SRC-IPCIDR$2"
+                    git add openclash/SRC-IPCIDR$2
+                }
+                makeDISALLOWEDIPSList "YAML"
+                makeDISALLOWEDIPSList "YAML" "-FS"
             - name: Commit and push changes
               run: |
-                if [ ! -s openclash/SRC-IPCIDR ]; then
-                    echo "Output file is empty. Exiting with error."
-                    exit 1
-                fi
-                sed -i '1i[YAML]\n+<rules>:' openclash/SRC-IPCIDR
                 git config user.name "github-actions[bot]"
                 git config user.email "github-actions[bot]@users.noreply.github.com"
-                git add openclash/SRC-IPCIDR
-                git diff --staged --quiet || git commit -m "Update ipcidr rules"
+                git diff --staged --quiet || git commit -m "Update disallowed ipcidr rules"
                 git push
