@@ -123,6 +123,8 @@ ip_rule: &ip_rule
     path: ./rule_provider/PROXYIP-Telegram.yaml
 
 +<rules>:
+## FORCE_USE_IPV4
+  - IP-CIDR6, ::/0,DIRECT
   - RULE-SET,bypass-list,DIRECT
   - RULE-SET,reject-list,REJECT
   - RULE-SET,route-optimization,Route-optimization
