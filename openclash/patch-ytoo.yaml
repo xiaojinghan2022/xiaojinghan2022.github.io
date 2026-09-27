@@ -7,12 +7,14 @@ proxy-groups+:
     filter: "(?i)韩国|kr"
   - name: Proxy
     #type: select
-    type: url-test
+    #type: url-test
+    type: fallback
     url: "https://www.gstatic.com/generate_204"
     interval: 150
-    fallback: DIRECT
+    #fallback: DIRECT
     proxies:
       - Proxies
+      - DIRECT
 proxy-groups*:
   where:
     name: Proxies
