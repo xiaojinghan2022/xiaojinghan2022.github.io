@@ -23,6 +23,7 @@ jobs:
             - name: Merge ipcidr rules
               run: |
                 TMP_DIR=${RUNNER_TEMP:-/tmp}
+                mkdir -p "$TMP_DIR"
                 mkdir -p openclash
                 cat > "${TMP_DIR}/merge_ips.py" <<'EOF'
                 #!/usr/bin/env python3
@@ -73,7 +74,8 @@ jobs:
                 EOF
 
                 makeDISALLOWEDIPSList() {
-                    [ ! -f "openclash/$1$2" ] && echo "Error: openclash/$1$2 files not found" && exit 1
+                    [ -f "openclash/$1$2" ] || { echo "Error: openclash/$1$2 files not found"; return 1; }
+                    sed -i 's/[[:space:]]*$//; /^$/d; /^#/d' "openclash/$1$2"
                     awk -v exc_file="openclash/$1$2" '
                     BEGIN { while((getline < exc_file) > 0) exc[$0]=1 }
                     END {
@@ -89,20 +91,23 @@ jobs:
                         }
                     }' /dev/null > "${TMP_DIR}/full_ips_$1$2.txt"
                     python3 "${TMP_DIR}/merge_ips.py" disallow < "${TMP_DIR}/full_ips_$1$2.txt" > "openclash/DISALLOWED-IPS$2"
-                    [ ! -s "openclash/DISALLOWED-IPS$2" ] && echo "Output file openclash/DISALLOWED-IPS$2 is empty. Exiting with error." && exit 1
+                    [ -s "openclash/DISALLOWED-IPS$2" ] || { echo "Output file openclash/DISALLOWED-IPS$2 is empty. Exiting with error."; return 1; }
                     sed -i '1i[YAML]\n<lan-disallowed-ips>+:' "openclash/DISALLOWED-IPS$2"
                     git add openclash/DISALLOWED-IPS$2
 
                     python3 "${TMP_DIR}/merge_ips.py" src < "${TMP_DIR}/full_ips_$1$2.txt" > "openclash/SRC-IPCIDR$2"
-                    [ ! -s "openclash/SRC-IPCIDR$2" ] && echo "Output file openclash/SRC-IPCIDR$2 is empty. Exiting with error." && exit 1
+                    [ -s "openclash/SRC-IPCIDR$2" ] || { echo "Output file openclash/SRC-IPCIDR$2 is empty. Exiting with error."; return 1; }
                     sed -i '1i[YAML]\n+<rules>:' "openclash/SRC-IPCIDR$2"
                     git add openclash/SRC-IPCIDR$2
                 }
-                makeDISALLOWEDIPSList "YAML"
-                makeDISALLOWEDIPSList "YAML" "-FS"
+                makeDISALLOWEDIPSList "YAML" || exit 1
+                makeDISALLOWEDIPSList "YAML" "-FS" || exit 1
             - name: Commit and push changes
               run: |
                 git config user.name "github-actions[bot]"
                 git config user.email "github-actions[bot]@users.noreply.github.com"
-                git diff --staged --quiet || git commit -m "Update disallowed ipcidr rules"
-                git push
+                git diff --staged --quiet || {
+                    git commit -m "Update disallowed ipcidr rules"
+                    git push
+                }
+                exit 0
