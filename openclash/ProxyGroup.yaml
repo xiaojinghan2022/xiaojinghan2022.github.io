@@ -156,5 +156,6 @@ dns:
   <fake-ip-filter>+:
     - +.lctianxing.top
     - +.dynv6.com
+    - www.bing.com
     - geosite:connectivity-check
     - geosite:private
