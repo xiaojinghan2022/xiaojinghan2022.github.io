@@ -169,5 +169,7 @@ dns:
     - www.gravatar.com
     - prod-publishers-content.s3.us-east-1.amazonaws.com
     - fonts.googleapis.com
+    - fonts.gstatic.com
+    - geolocation.onetrust.com
     - geosite:connectivity-check
     - geosite:private
