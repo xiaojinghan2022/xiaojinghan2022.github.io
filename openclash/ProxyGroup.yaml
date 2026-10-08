@@ -173,5 +173,7 @@ dns:
     - geolocation.onetrust.com
     - www.google.com
     - assets.adobedtm.com
+    - img-s-msn-com.akamaized.net
+    - ts1.tc.mm.bing.net
     - geosite:connectivity-check
     - geosite:private
