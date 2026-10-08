@@ -156,7 +156,7 @@ dns:
   <fake-ip-filter>+:
     - +.lctianxing.top
     - +.dynv6.com
-  ##LNA CORS
+  ## LNA CORS
     - www.bing.com
     - img.shields.io
     - frenck.dev
@@ -175,5 +175,6 @@ dns:
     - assets.adobedtm.com
     - img-s-msn-com.akamaized.net
     - ts1.tc.mm.bing.net
+    - ts2.tc.mm.bing.net
     - geosite:connectivity-check
     - geosite:private
