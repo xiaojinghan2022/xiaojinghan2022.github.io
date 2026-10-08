@@ -163,5 +163,11 @@ dns:
     - images.steamusercontent.com
     - brands.home-assistant.io
     - edge.microsoft.com
+    - dockerstatic.com
+    - cdn.cookielaw.org
+    - djeqr6to3dedg.cloudfront.net
+    - www.gravatar.com
+    - prod-publishers-content.s3.us-east-1.amazonaws.com
+    - fonts.googleapis.com
     - geosite:connectivity-check
     - geosite:private
