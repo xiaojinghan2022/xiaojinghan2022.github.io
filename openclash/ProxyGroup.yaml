@@ -161,5 +161,6 @@ dns:
     - img.shields.io
     - frenck.dev
     - images.steamusercontent.com
+    - brands.home-assistant.io
     - geosite:connectivity-check
     - geosite:private
