@@ -156,11 +156,12 @@ dns:
   <fake-ip-filter>+:
     - +.lctianxing.top
     - +.dynv6.com
-  ##CORS
+  ##LNA CORS
     - www.bing.com
     - img.shields.io
     - frenck.dev
     - images.steamusercontent.com
     - brands.home-assistant.io
+    - edge.microsoft.com
     - geosite:connectivity-check
     - geosite:private
