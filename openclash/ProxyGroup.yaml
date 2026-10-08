@@ -171,5 +171,7 @@ dns:
     - fonts.googleapis.com
     - fonts.gstatic.com
     - geolocation.onetrust.com
+    - www.google.com
+    - assets.adobedtm.com
     - geosite:connectivity-check
     - geosite:private
