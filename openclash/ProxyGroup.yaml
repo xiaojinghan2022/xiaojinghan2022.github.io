@@ -176,5 +176,6 @@ dns:
     - img-s-msn-com.akamaized.net
     - ts1.tc.mm.bing.net
     - ts2.tc.mm.bing.net
+    - ipcelou-298103.appspot.com
     - geosite:connectivity-check
     - geosite:private
