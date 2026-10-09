@@ -177,5 +177,6 @@ dns:
     - ts1.tc.mm.bing.net
     - ts2.tc.mm.bing.net
     - ipcelou-298103.appspot.com
+    - api.ip.sb
     - geosite:connectivity-check
     - geosite:private
