@@ -178,5 +178,6 @@ dns:
     - ts2.tc.mm.bing.net
     - ipcelou-298103.appspot.com
     - api.ip.sb
+    - faro-collector-prod-us-east-0.grafana.net
     - geosite:connectivity-check
     - geosite:private
